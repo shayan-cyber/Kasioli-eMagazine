@@ -1,0 +1,1025 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>quiz-single</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="shortcut icon" href="">
+
+  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link href="{% static 'css/jquery.mb.YTPlayer.min.css' %}" media="all" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Galada&display=swap" rel="stylesheet">
+
+<style>
+
+  body{
+  font-family: 'Alata', sans-serif;
+
+}
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+ font-family: 'Alata', sans-serif;
+
+}
+a, span{
+
+ font-family: 'Alata', sans-serif;
+
+
+}
+ul {
+  list-style-type: none;
+}
+
+
+.lists {padding-left: 0em; text-indent: -2em;}
+
+
+
+  /*loader*/
+
+/* Created by Ronak*/
+
+.stage {
+  margin: 100px 50px 50px 50px;
+
+}
+
+@-webkit-keyframes spincube {
+  from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  16%      { -webkit-transform: rotateY(-90deg);                           }
+  33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);            }
+  50%      { -webkit-transform: rotateY(-180deg) rotateZ(90deg);           }
+  66%      { -webkit-transform: rotateY(-270deg) rotateX(90deg);           }
+  83%      { -webkit-transform: rotateX(90deg);                            }
+}
+
+@keyframes spincube {
+  from,to {
+    -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    -moz-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+  }
+  33% {
+    -moz-transform: rotateY(-90deg) rotateZ(90deg);
+    -ms-transform: rotateY(-90deg) rotateZ(90deg);
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    -moz-transform: rotateY(-180deg) rotateZ(90deg);
+    -ms-transform: rotateY(-180deg) rotateZ(90deg);
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    -moz-transform: rotateY(-270deg) rotateX(90deg);
+    -ms-transform: rotateY(-270deg) rotateX(90deg);
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83% {
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+.cubespinner {
+  -webkit-animation-name: spincube;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 12s;
+
+  animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -webkit-transform-origin: 60px 60px 0;
+  -moz-transform-origin: 60px 60px 0;
+  -ms-transform-origin: 60px 60px 0;
+  transform-origin: 60px 60px 0;
+}
+
+.cubespinner div {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,0.9);
+  line-height:200px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.cubespinner .face1 {
+  color: CadetBlue;
+  -webkit-transform: translateZ(60px);
+  -moz-transform: translateZ(60px);
+  -ms-transform: translateZ(60px);
+  transform: translateZ(60px);
+}
+.cubespinner .face2 {
+  color: ForestGreen;
+  -webkit-transform: rotateY(90deg) translateZ(60px);
+  -moz-transform: rotateY(90deg) translateZ(60px);
+  -ms-transform: rotateY(90deg) translateZ(60px);
+  transform: rotateY(90deg) translateZ(60px);
+}
+.cubespinner .face3 {
+  color: blue;
+  -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+  -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+  -ms-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+  transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+}
+.cubespinner .face4 {
+  color: orange;
+  -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+  -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+  -ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+  transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+}
+.cubespinner .face5 {
+  color: red;
+  -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+  -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+  -ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+  transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+}
+.cubespinner .face6 {
+  color: DarkSlateGray;
+  -webkit-transform: rotateX(-90deg) translateZ(60px);
+  -moz-transform: rotateX(-90deg) translateZ(60px);
+  -ms-transform: rotateX(-90deg) translateZ(60px);
+  transform: rotateX(-90deg) translateZ(60px);
+}
+.cubespinner .face7 {
+    color: Yellow;
+    -webkit-transform:rotateX(-90deg)
+    translateZ(60px);
+    -moz-transform: rotate x(-90deg)translateZ(60px);
+    -ms-transform: rotate x(-90deg)translateZ(60px);
+    transform: rotateX(-90deg)
+    translateZ(60px);
+}
+
+
+/*border*/
+         .underline {
+  width: 100%;
+  border-bottom: 4px solid #638dd1;
+  text-align: center;
+  position: relative;
+}
+.underline span {
+  position: relative;
+  top: 15px;
+  padding: 0 10px;
+  background: #fff;
+  font-size:25px;
+}
+
+
+  /*anime*/
+
+svg{
+    width: 500px ;
+    align-self: center;
+    justify-self: center;
+    display:block;
+
+    height: 100%;
+    width:100%;
+}
+
+svg #mujer{
+    animation-duration:.6s;
+    animation-name: meser;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+/*dropdown*/
+.dropdown {
+    width: 10em;
+    height: 3em;
+    padding: 1em 1.5em;
+    box-sizing: border-box;
+    background-image: -moz-linear-gradient( 17deg, rgb(13,5,149) 0%, rgb(75,15,172) 46%, rgb(136,24,194) 100%);
+    background-image: -webkit-linear-gradient( 17deg, rgb(13,5,149) 0%, rgb(75,15,172) 46%, rgb(136,24,194) 100%);
+    background-image: -ms-linear-gradient( 17deg, rgb(13,5,149) 0%, rgb(75,15,172) 46%, rgb(136,24,194) 100%);
+    border-radius: 1.5em;
+
+    color: white;
+    line-height: 1em;
+    text-transform: uppercase;
+
+    font-weight: 500;
+    text-align: center;
+
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: white;
+
+    left: 0;
+
+    background-image: -moz-linear-gradient( 45deg, rgb(13,5,149) 0%, rgb(66,0,255) 46%, rgb(101,12,225) 72%, rgb(136,24,194) 100%);
+    background-image: -webkit-linear-gradient( 45deg, rgb(13,5,149) 0%, rgb(66,0,255) 46%, rgb(101,12,225) 72%, rgb(136,24,194) 100%);
+    background-image: -ms-linear-gradient( 45deg, rgb(13,5,149) 0%, rgb(66,0,255) 46%, rgb(101,12,225) 72%, rgb(136,24,194) 100%);
+
+    width: 100%;
+    padding: 3em 0 0 0;
+    box-sizing: border-box;
+    border-radius: 1.5em;
+    box-shadow: 0.5em 0.5em 1em 0 rgba(0,0,0,0.2);
+
+    z-index: 1;
+    margin-top: 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-itens {
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: block;
+
+    text-align: center;
+    margin: 1em 0;
+}
+
+/*expandable*/
+
+.wrapper{
+  width:70%;
+}
+@media(max-width:992px){
+ .wrapper{
+  width:100%;
+}
+}
+.panel-heading {
+  padding: 0;
+	border:0;
+}
+.panel-title>a, .panel-title>a:active{
+	display:block;
+	padding:15px;
+  color:#555;
+  font-size:16px;
+  font-weight:bold;
+	text-transform:uppercase;
+	letter-spacing:1px;
+  word-spacing:3px;
+	text-decoration:none;
+}
+.panel-heading  a:before {
+   font-family: 'Glyphicons Halflings';
+   content: "\e114";
+   float: right;
+   transition: all 0.5s;
+}
+.panel-heading.active a:before {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.preview {
+    background: linear-gradient(344deg, #d0f7fe, #ffffff);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    -o-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:47% 0%}
+    50%{background-position:54% 100%}
+    100%{background-position:47% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:47% 0%}
+    50%{background-position:54% 100%}
+    100%{background-position:47% 0%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:47% 0%}
+    50%{background-position:54% 100%}
+    100%{background-position:47% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:47% 0%}
+    50%{background-position:54% 100%}
+    100%{background-position:47% 0%}
+</style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <div class="header-top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 d-flex">
+            <a href="/" class="site-logo">
+              <div class="site-logo">
+              <img style="
+
+                height: 146px;
+    width: 172px;
+    position: relative;
+    margin-left: -25px;
+    margin-top: -22px;
+    " src="{% static 'images/logo.png' %}" alt=""></div>
+            </a>
+
+            <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
+
+          </div>
+          <div class="col-12 col-lg-6 ml-auto d-flex">
+            <div class="ml-md-auto top-social d-none d-lg-inline-block">
+              <a href="#" class="d-inline-block p-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="d-inline-block p-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="d-inline-block p-3"><span class="icon-instagram"></span></a>
+            </div>
+
+
+
+          </div>
+          <div class="col-6 d-block d-lg-none text-right">
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
+
+        <div class="container">
+          <div class="d-flex align-items-center">
+
+            <div class="mr-auto">
+              <nav class="site-navigation position-relative text-right" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
+                  <li class="active">
+                    <a href="/" class="nav-link text-left">Home</a>
+                  </li>
+
+                  <li>
+                    <a href="/contact/" class="nav-link text-left">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="/blog/{{editorial.slug}}" class="nav-link text-left">Editorial</a>
+                  </li>
+                  <li>
+                      <a href="/quizes/" class="nav-link text-left">Quiz</a>
+                  </li>
+
+
+
+                  <li style="width:244px;"><form style="max-width: 100%;" enctype="multipart/form-data" method="POST" action="/search/" class="search-form d-inline-block">
+
+                    {% csrf_token %}
+                    <div class="d-flex">
+                      <input type="text" name="query" id="query" class="form-control" placeholder="Search...">
+                      <button type="submit" class="btn btn-secondary" ><span class="icon-search"></span></button>
+                    </div>
+                  </form>
+                </li>
+                <li style="padding-top :1em; padding-bottom:1em;">
+                  <style>
+
+                      .lists{
+                          text-indent:-1.4em;
+                      }
+
+                  </style>
+                <div style="cursor: pointer;" class="dropdown">
+                  <span>সাহিত্য বিশেষ</span>
+                  <div style="margin-bottom: 2rem;" class="dropdown-content">
+                    <ul style="margin-left:-1em">
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/poems/">কবিতা</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/comics/">কমিক্চ্</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/upanyax/">উপন‍্যাস</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/songs/">সংগীত</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/interviews/">কথা-বাৰ্তা</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/comedy/">ব‍্যংগ</a></li>
+                        <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/microstories/">অণুগল্প</a></li>
+
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/stories/">গল্প </a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/more/">More </a></li>
+
+
+
+                    </ul>
+
+                  </div>
+              </div>
+              </li>
+
+              <li style="padding-top :1em; padding-bottom:1em;">
+                <div style="cursor: pointer; " class="dropdown">
+                  <span>প্ৰৱন্ধ</span>
+                  <div style="margin-bottom: 2rem;" class="dropdown-content">
+                    <ul style="margin-left:-1em">
+
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/science/">বিজ্ঞান</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/medical/">চিকিৎসা বিজ্ঞান</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/best_of_xonkhya/">এই সংখ‍্যা বিশেষ</a></li>
+
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/history/">ইতিহাসৰ অনুৰণন</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/awareness/">গণ-জাগৰন</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/sports/">ক্ৰীড়া</a></li>
+
+                    </ul>
+
+
+
+                  </div>
+              </div>
+              </li>
+                </ul>
+              </nav>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 single-content">
+
+            <p class="mb-5">
+              <img src="/media/{{post.thumbnail}}" alt="Image" class="img-fluid">
+            </p>
+            <h1 class="mb-4">
+              {{post.title}}
+            </h1>
+            <div class="post-meta d-flex mb-5">
+              <style>
+                .circular {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.circular img {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+              </style>
+              <div class="bio-pic mr-3">
+                <div class="circular">
+                  <img src="/media/{{post.author.Profile_Picture}}" />
+                </div>
+              </div>
+              <div class="vcard">
+                <span class="d-block"><a href="/profile/{{post.author.name}}">{{post.author.name}}</a>
+                <span class="date-read">{{post.time}} <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+              </div>
+            </div>
+
+            <div style="font-size: large;
+    padding: 16px;
+    font-weight: 590;
+    color: black;
+
+    background: linear-gradient(0deg, rgba(255,255,255,1) 36%, rgba(176,242,254,1) 90%);" class="preview">
+            {{post.content}}
+          </div>
+
+
+            <div class="pt-5">
+                    <p>Categories:  <a href="#">{{post.category}}</a> in <a href="#">{{post.xonkhya}}</a> ,Likes: <style>
+                      .like__btn {
+           border: none;
+           background-color: #e74c3c;
+           color: white;
+           cursor: pointer;
+           padding: 0.8rem;
+           border-radius: 0.4rem;
+           max-width: 200px;
+           transition: all ease 0.3s;
+           display: flex;
+           align-items: center;
+           width: 50px;
+            height: 2rem;
+            margin-bottom: 1rem;
+        }
+         .like__btn:hover {
+           background-color: rgba(231, 76, 60, 0.8);
+        }
+         .like__btn:disabled {
+           background-color: #d4cfcf;
+           cursor: pointer;
+        }
+         .like__icon {
+           font-size: .8rem;
+           margin-right: 0.3rem;
+        }
+         .like__number {
+           font-size: 0.8rem;
+        }
+
+
+                    </style>
+                    <form method="POST" action="{% url 'like_quiz' post.slug %}">{% csrf_token %}
+
+                    <button type="submit" name="com_id" value="{{post.id}}" class="like__btn animated">
+                      <i class="like__icon fa fa-heart"></i>
+                      <span class="like__number">{{post.likequiz_set.all|length}}</span>
+                    </button>
+                  </form></p>
+                  </div>
+      <!--expandable-->
+
+
+      <div style="  font-family: 'Glyphicons Halflings';" class="wrapper center-block">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div style="box-shadow: 0 0 4px black;border: 2px solid black;" class="panel panel-default">
+            <div class="panel-heading active" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a style="  font-family: 'Glyphicons Halflings';" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                 উত্তৰ
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div style="    margin: 9px;" class="panel-body">
+               {{post.answer}}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+                  <!--comment-->
+    <style>
+
+    </style>
+     <div class="site-section">
+
+     <div id ="comments" class="pt-5">
+       <div style="margin-left: 1rem;" class="section-title">
+         <h2 class="mb-5">{{post.commentquiz_set.all|length}} Comments</h2>
+       </div>
+
+
+
+       <div class="comment-list2">
+       {% for com in comments %}
+       <ul class="comment-list" style="display: none; margin-left: 1rem; margin-right: 1rem;">
+         <li style="border-bottom: 3px outset rgba(0,0,0,0.41);
+         border-radius: 30px;" class="comment">
+           <div class="vcard bio">
+             {% if com.image  %}
+             <img src="/media/{{com.image}}" alt="">
+
+               {% else %}
+
+             <img src="https://img.icons8.com/cotton/64/000000/user-settings.png" alt=""/>
+             {% endif %}
+           </div>
+           <div class="comment-body">
+             <h3>{{com.name}}</h3>
+             <div class="meta">{{com.time}}</div>
+             <p>{{com.comment}}</p>
+             <style>
+               .like__btn {
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    max-width: 200px;
+    transition: all ease 0.3s;
+    display: flex;
+    align-items: center;
+    width: 50px;
+     height: 2rem;
+     margin-bottom: 1rem;
+ }
+  .like__btn:hover {
+    background-color: rgba(231, 76, 60, 0.8);
+ }
+  .like__btn:disabled {
+    background-color: #d4cfcf;
+    cursor: pointer;
+ }
+  .like__icon {
+    font-size: .8rem;
+    margin-right: 0.3rem;
+ }
+  .like__number {
+    font-size: 0.8rem;
+ }
+
+
+             </style>
+             <form method="POST" action="{% url 'like_comquiz' com.pk post.slug %}">{% csrf_token %}
+
+             <button type="submit" name="com_id" value="{{com.id}}" class="like__btn animated">
+               <i class="like__icon fa fa-heart"></i>
+               <span class="like__number">{{com.likecomquiz_set.all|length}}</span>
+             </button>
+           </form>
+           </div>
+         </li>
+       </ul>
+       {% endfor %}
+     </div>
+
+         <style>
+           .load-more{
+   background-color:#000;
+   color:#fff !important;
+   padding:5px 10px;
+   border-radius:4px;
+   font-size:20px;
+   margin:50px 0;
+   display:inline-block;
+ }
+
+ .load-more:hover{
+   background-color:blue;
+   text-decoration:none;
+ }
+         </style>
+
+
+        <center><a href="#" class="load-more">Load More</a></center>
+
+
+       <div style="margin-bottom: -90px;" class="comment-form-wrap pt-5">
+         <div style="margin-left:1rem" class="section-title">
+           <h2 class="mb-5">Leave a comment</h2>
+         </div>
+         <form enctype="multipart/form-data" style="background: rgb(176,242,254);
+         background: linear-gradient(0deg, rgba(176,242,254,1) 42%, rgba(255,255,255,1) 89%);" action="" method="post" class="p-5 ">
+           {% csrf_token %}
+           <div class="form-group">
+             <label for="name">Name *</label>
+             <input type="text" name="name" class="form-control" id="name">
+           </div>
+           <div class="form-group">
+             <label for="email">Email *</label>
+             <input type="email" name="email" class="form-control" id="email">
+             <input type="hidden" id="date" name="date">
+
+
+           </div>
+
+
+           <div class="form-group">
+             <label for="message">Message</label>
+             <textarea name="message1" id="message1"  cols="30" rows="10" class="form-control"></textarea>
+           </div>
+           <div class="form-group">
+             <style>
+               .btn-file {
+     position: relative;
+     overflow: hidden;
+ }
+ .btn-file input[type=file] {
+     position: absolute;
+     top: 0;
+     right: 0;
+     min-width: 100%;
+     min-height: 100%;
+     font-size: 100px;
+     text-align: right;
+     filter: alpha(opacity=0);
+     opacity: 0;
+     outline: none;
+     cursor: inherit;
+     display: block;
+ }
+             </style>
+             <span class="btn btn-primary btn-file">
+               Upload Dp <input name="dphome" type="file">
+           </span>
+           </div>
+           <center><div style="margin-top: 1rem;" class="form-group">
+             <input type="submit" value="Post Comment" class="btn btn-primary py-3">
+           </div></center>
+
+         </form>
+       </div>
+     </div>
+
+   </div>
+     <!--comment-->
+</div>
+
+
+          <div style="margin-top: 60px;" class="col-lg-3 ml-auto">
+            <div class="section-title">
+              <h2>Popular Posts</h2>
+            </div>
+
+            {% for i in posts|slice:":6" %}
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start">{{forloop.counter}}</div>
+              <div class="trend-contents">
+                <h2><a href="blog-single.html">{{i.title|truncatechars:200 }}</a></h2>
+                <div class="post-meta">
+                  <span class="d-block"><a href="#">{{post.author}}</a> in <a href="#">News</a></span>
+                  <span class="date-read">{{i.time}}<span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+
+
+
+
+
+
+
+            <p>
+              <a href="/profile/{{post.author.name}}" class="more">See All Popular <span class="icon-keyboard_arrow_right"></span></a>
+            </p>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <style>
+
+
+    /*custom-footer*/
+
+
+
+
+#footer2{
+    width:100vw;
+    height:41vh;
+    z-index:10;
+    position:relative;
+    bottom:0;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow:hidden;
+    background-image:radial-gradient(rgb(212, 239, 248),rgb(216, 245, 245));
+}
+ #footer2 .consolationNote{
+    z-index:10;
+    color:rgb(0, 62, 87);
+    position: relative;
+    top:0%;
+    text-align: center;
+    font-size:1.1rem;
+    transform:translateY(0vh);
+    line-height:2rem;
+    padding:1rem;
+    font-weight:bold;
+    text-align: left;
+ }
+ #footer2:after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0vh;
+    left:0;
+    background-color:black;
+    opacity:0.1;
+    transform:scale(0);
+    color:white;
+    pointer-events:none;
+    z-index:-1;
+}
+#footer2 .change{
+    text-align:right;
+    font-size:0.8rem;
+    color:rgb(54, 54, 5);
+}
+#footer2:hover:after{
+    transition:1s;
+    transform:scale(1);
+}
+#footer2:hover:after{
+    transition:1s;
+    transform:scale(1);
+}
+@media (max-width: 500px){
+    #footer2{
+        height:40vh;
+    }
+    #footer2 .consolationNote{
+        font-size:0.7rem;
+        transform:translateY(0vh);
+        line-height:1.5rem;
+        padding:0.5rem;
+        text-align: left;
+     }
+     #footer2 .change{
+        font-size:0.5rem;
+     }
+}
+
+</style>
+    <div style=" background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(176,242,254,1) 97%); margin-top: -1rem; padding-top:2.5rem;padding-bottom:0rem; margin-bottom:-5rem" class="site-section subscribe">
+      <div class="container">
+        <center><div style="margin-bottom: 4rem; width: 50%; background: transparent; " class="underline">
+
+          <span style="background: transparent; top:0px ;">
+            <img  src="{% static 'feather.png' %}" alt="">
+           </span>
+           </div></center>
+        <form action="/newsletter/" method="post" class="row align-items-center">{% csrf_token %}
+          <div class="col-md-5 mr-auto">
+            <h2>নিউজ লেটাৰত গ্ৰাহকীভুক্ত হওঁক</h2>
+            {% load socialaccount %}
+             {% providers_media_js %}
+
+            <p>Subscribe To Our Newsletter And Get Notified When There Is A New Post Uploaded To Our Website</p>
+          </div>
+          <div class="col-md-6 ml-auto">
+            <div class="d-flex">
+              <input type="email" id="nlemail" name ="nlemail" class="form-control" placeholder="Enter your email">
+              <button type="submit" class="btn btn-secondary" ><span class="icon-paper-plane"></span></button>
+            </div>
+          </div>
+        </form>
+        <center><a  href="{% provider_login_url 'google' %}"><button style="margin-top: 32px;"  class="btn btn-secondary" >Admin</button></a></center>
+
+
+      </div>
+       <!--custom -footer-->
+    <section id="footer2">
+        <div class="consolationNote" style="color:#638dd1;">
+            <h2>"Samar Hazarika...</h2>
+        </div>
+        <div class="consolationNote">
+            <p>যোৰহাট চিকিৎসা মহাবিদ্যালয়ৰ ছাত্ৰ ছাত্ৰী সকলে এখনি আলোচনী প্ৰকাশ কৰিবলৈ প্ৰস্তুতি কৰিছে ।
+                "কাঁচিয়লি" এটি সুন্দৰ নামেৰে নামাকৰণ কৰাত আনন্দিত হৈছো । এই আলোচনীখনৰ সম্পাদনা বিভাগ আৰু বিষয়ববীয়া সকলোলৈকে মোৰ হিয়াভৰা শুভেচ্ছা জনালো , চিকিৎসাৰ লগে লগে অসমীয়া সাহিত্য সংস্কৃতিক আগবঢ়ায় নিব বুলি মই আশা কৰিলো । শেষত মোৰ আন্তৰিক শুভকামনা ও ধন্যবাদেৰে -" </div>
+        <div class="consolationNote change" style="text-align:right;">
+
+        </div>
+    </section>
+    </div>
+
+
+
+
+    <div class="footer">
+
+    </div>
+
+
+  </div>
+  <!-- .site-wrap -->
+
+
+  <!-- loader -->
+  <div id="loader" class="show fullscreen">
+    <center><div class="stage" style="width: 120px; height: 120px;">
+    <div class="cubespinner">
+      <div class="face1">কাঁচিয়লি</div>
+      <div class="face2">সংগীত</div>
+      <div class="face3">উপন‍্যাস</div>
+      <div class="face4">বিজ্ঞান</div>
+      <div class="face5">প্ৰশ্নবাণ</div>
+      <div class="face6">ব‍্যংগ</div>
+      <div class="face7">সংগীত</div>
+    </div>
+  </center>
+</div></div>
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
+
+
+
+
+  <script src="{% static 'js/main.js' %}"></script>
+  <script type="text/javascript">
+    document.getElementById('date').value = Date();
+  </script>
+  <script>
+    let contents = document.getElementsByClassName('preview');
+    Array.from(contents).forEach((element)=>{
+      element.innerHTML = element.innerText
+
+    })
+  </script>
+  <script>
+    $(document).ready(function(){
+    $(".comment-list").slice(0,3).show();
+    $(".load-more").click(function(e){
+      e.preventDefault();
+      $(".comment-list:hidden").slice(0,3).fadeIn("slow");
+
+      if($(".comment-list:hidden").length == 0){
+         $(".load-more").fadeOut("slow");
+        }
+    });
+  })
+  </script>
+<script>
+    /*expandable*/
+    $('.panel-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+  });
+
+  $('.panel-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
+  });
+</script>
+</body>
+
+</html>

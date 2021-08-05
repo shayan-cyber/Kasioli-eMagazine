@@ -1,0 +1,1001 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Interviews</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link href="{% static 'css/jquery.mb.YTPlayer.min.css' %}" media="all" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Galada&display=swap" rel="stylesheet">
+
+</head>
+<style>
+
+
+body{
+  font-family: 'Alata', sans-serif;
+
+}
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+ font-family: 'Alata', sans-serif;
+
+}
+a , span{
+
+ font-family: 'Alata', sans-serif;
+
+
+}
+ul {
+  list-style-type: none;
+}
+
+
+
+.lists {padding-left: 0em; text-indent: -2em;}
+
+.library .card .cardContainer .cardDiv a span img{
+    height:150px;
+    width:150px;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+
+.library .card .cardContainer .cardDiv .cardContent :hover{
+    color:#638dd1;
+}
+
+
+  /*loader*/
+
+/* Created by Ronak*/
+
+.stage {
+  margin: 100px 50px 50px 50px;
+
+}
+
+@-webkit-keyframes spincube {
+  from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  16%      { -webkit-transform: rotateY(-90deg);                           }
+  33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);            }
+  50%      { -webkit-transform: rotateY(-180deg) rotateZ(90deg);           }
+  66%      { -webkit-transform: rotateY(-270deg) rotateX(90deg);           }
+  83%      { -webkit-transform: rotateX(90deg);                            }
+}
+
+@keyframes spincube {
+  from,to {
+    -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    -moz-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+  }
+  33% {
+    -moz-transform: rotateY(-90deg) rotateZ(90deg);
+    -ms-transform: rotateY(-90deg) rotateZ(90deg);
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    -moz-transform: rotateY(-180deg) rotateZ(90deg);
+    -ms-transform: rotateY(-180deg) rotateZ(90deg);
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    -moz-transform: rotateY(-270deg) rotateX(90deg);
+    -ms-transform: rotateY(-270deg) rotateX(90deg);
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83% {
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+.cubespinner {
+  -webkit-animation-name: spincube;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 12s;
+
+  animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -webkit-transform-origin: 60px 60px 0;
+  -moz-transform-origin: 60px 60px 0;
+  -ms-transform-origin: 60px 60px 0;
+  transform-origin: 60px 60px 0;
+}
+
+.cubespinner div {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,0.9);
+  line-height:200px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.cubespinner .face1 {
+  color: CadetBlue;
+  -webkit-transform: translateZ(60px);
+  -moz-transform: translateZ(60px);
+  -ms-transform: translateZ(60px);
+  transform: translateZ(60px);
+}
+.cubespinner .face2 {
+  color: ForestGreen;
+  -webkit-transform: rotateY(90deg) translateZ(60px);
+  -moz-transform: rotateY(90deg) translateZ(60px);
+  -ms-transform: rotateY(90deg) translateZ(60px);
+  transform: rotateY(90deg) translateZ(60px);
+}
+.cubespinner .face3 {
+  color: blue;
+  -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+  -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+  -ms-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+  transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+}
+.cubespinner .face4 {
+  color: orange;
+  -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+  -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+  -ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+  transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+}
+.cubespinner .face5 {
+  color: red;
+  -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+  -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+  -ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+  transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+}
+.cubespinner .face6 {
+  color: DarkSlateGray;
+  -webkit-transform: rotateX(-90deg) translateZ(60px);
+  -moz-transform: rotateX(-90deg) translateZ(60px);
+  -ms-transform: rotateX(-90deg) translateZ(60px);
+  transform: rotateX(-90deg) translateZ(60px);
+}
+.cubespinner .face7 {
+    color: Yellow;
+    -webkit-transform:rotateX(-90deg)
+    translateZ(60px);
+    -moz-transform: rotate x(-90deg)translateZ(60px);
+    -ms-transform: rotate x(-90deg)translateZ(60px);
+    transform: rotateX(-90deg)
+    translateZ(60px);
+}
+
+
+/*border*/
+         .underline {
+  width: 100%;
+  border-bottom: 4px solid #638dd1;
+  text-align: center;
+  position: relative;
+}
+.underline span {
+  position: relative;
+  top: 15px;
+  padding: 0 10px;
+  background: #fff;
+  font-size:25px;
+}
+
+
+  /*anime*/
+
+svg{
+    width: 500px ;
+    align-self: center;
+    justify-self: center;
+    display:block;
+
+    height: 100%;
+    width:100%;
+}
+
+svg #mujer{
+    animation-duration:.6s;
+    animation-name: meser;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes meser{
+    from{
+        transform: translateX(0) translateY(0);
+
+    }
+    to{
+        transform: translateX(20px) translateY(14px);
+    }
+}
+
+svg #columpio{
+    animation-duration: .6s;
+    animation-name: cuerdas;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes cuerdas{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(10px);
+    }
+}
+
+svg #hojas-arbol{
+    animation-duration: .6s;
+    animation-name: hojas;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes hojas{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.st0{fill:#3F3D56;}
+	.st1{opacity:0.1;enable-background:new    ;}
+	.st2{fill:#FFB9B9;}
+	.st3{fill:#D0CDE1;}
+	.st4{fill:#2F2E41;}
+	.st5{fill:#0C963A;}
+	.st6{fill:#F2F2F2;}
+
+
+.anime{
+    position: relative;
+    display: block;
+    height: 190px;
+    width: 160px;
+}
+
+/*dropdown*/
+.dropdown {
+    width: 10em;
+    height: 3em;
+    padding: 1em 1.5em;
+    box-sizing: border-box;
+    background-image: -moz-linear-gradient( 17deg, rgb(13,5,149) 0%, rgb(75,15,172) 46%, rgb(136,24,194) 100%);
+    background-image: -webkit-linear-gradient( 17deg, rgb(13,5,149) 0%, rgb(75,15,172) 46%, rgb(136,24,194) 100%);
+    background-image: -ms-linear-gradient( 17deg, rgb(13,5,149) 0%, rgb(75,15,172) 46%, rgb(136,24,194) 100%);
+    border-radius: 1.5em;
+
+    color: white;
+    line-height: 1em;
+    text-transform: uppercase;
+
+    font-weight: 500;
+    text-align: center;
+
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    margin-top: 1rem;
+    position: absolute;
+    color: white;
+
+    left: 0;
+
+    background-image: -moz-linear-gradient( 45deg, rgb(13,5,149) 0%, rgb(66,0,255) 46%, rgb(101,12,225) 72%, rgb(136,24,194) 100%);
+    background-image: -webkit-linear-gradient( 45deg, rgb(13,5,149) 0%, rgb(66,0,255) 46%, rgb(101,12,225) 72%, rgb(136,24,194) 100%);
+    background-image: -ms-linear-gradient( 45deg, rgb(13,5,149) 0%, rgb(66,0,255) 46%, rgb(101,12,225) 72%, rgb(136,24,194) 100%);
+
+    width: 100%;
+    padding: 3em 0 0 0;
+    box-sizing: border-box;
+    border-radius: 1.5em;
+    box-shadow: 0.5em 0.5em 1em 0 rgba(0,0,0,0.2);
+
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-itens {
+    color: inherit;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    text-align: center;
+    margin: 1em 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+  --color: #3c3163;
+  --transition-time: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+a {
+  color: inherit;
+}
+
+.cards-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
+  padding: 4rem;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.card {
+  font-family: 'Heebo';
+  --bg-filter-opacity: 0.5;
+  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+  height: 20em;
+  width: 15em;
+  font-size: 1.5em;
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  /*margin: 2em;*/
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 5em -1em black;
+  transition: all, var(--transition-time);
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #ccc;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: rotate(0);
+}
+
+.card h1 {
+  margin-top: 1rem;
+  font-size: 1.1em;
+  line-height: 1.2em;
+}
+
+.card p {
+  font-size: 0.75em;
+  font-family: 'Open Sans';
+  margin-top: 0.5em;
+  line-height: 2em;
+}
+
+.card .tags {
+  display: flex;
+}
+
+.card .tags .tag {
+  font-size: 0.75em;
+  background: rgba(255,255,255,0.5);
+  border-radius: 0.3rem;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  line-height: 1.5em;
+  transition: all, var(--transition-time);
+}
+
+.card:hover .tags .tag {
+  background: var(--color);
+  color: white;
+}
+
+.card .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75em;
+  padding: 1em;
+  line-height: 1em;
+  opacity: .8;
+}
+
+.card:before, .card:after {
+  content: '';
+  transform: scale(0);
+  transform-origin: top left;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -5;
+  transition: all, var(--transition-time);
+  transition-timing-function: ease-in-out;
+}
+
+.card:before {
+  background: #ddd;
+  width: 250%;
+  height: 250%;
+}
+
+.card:after {
+  background: white;
+  width: 200%;
+  height: 200%;
+}
+
+.card:hover {
+  color: var(--color);
+}
+
+.card:hover:before, .card:hover:after {
+  transform: scale(1);
+}
+
+.card-grid-space .num {
+  font-size: 3em;
+  margin-bottom: 1.2rem;
+  margin-left: 1rem;
+}
+
+.info {
+  font-size: 1.2em;
+  display: flex;
+  padding: 1em 3em;
+  height: 3em;
+}
+
+.info img {
+  height: 3em;
+  margin-right: 0.5em;
+}
+
+.info h1 {
+  font-size: 1em;
+  font-weight: normal;
+  font-family: 'Open Sans';
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    justify-content: center;
+  }
+  .card-grid-space .num {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards-wrapper {
+    padding: 4rem 2rem;
+  }
+  .card {
+    max-width: calc(100vw - 4rem);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .info {
+    display: block;
+    text-align: center;
+  }
+  .info h1 {
+    margin: 0;
+  }
+}
+
+</style>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <div class="header-top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 d-flex">
+            <a href="/" class="site-logo">
+              <div class="site-logo">
+              <img style="
+
+                height: 146px;
+    width: 172px;
+    position: relative;
+    margin-left: -25px;
+    margin-top: -22px;
+    " src="{% static 'images/logo.png' %}" alt=""></div>
+            </a>
+
+            <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
+
+          </div>
+          <div class="col-12 col-lg-6 ml-auto d-flex">
+            <div class="ml-md-auto top-social d-none d-lg-inline-block">
+              <a href="#" class="d-inline-block p-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="d-inline-block p-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="d-inline-block p-3"><span class="icon-instagram"></span></a>
+            </div>
+
+
+
+          </div>
+          <div class="col-6 d-block d-lg-none text-right">
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
+
+        <div class="container">
+          <div class="d-flex align-items-center">
+
+            <div class="mr-auto">
+              <nav class="site-navigation position-relative text-right" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
+                  <li class="active">
+                    <a href="/" class="nav-link text-left">Home</a>
+                  </li>
+
+                  <li>
+                    <a href="/contact/" class="nav-link text-left">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="/blog/{{editorial.slug}}" class="nav-link text-left">Editorial</a>
+                  </li>
+                  <li>
+                      <a href="/quizes/" class="nav-link text-left">Quiz</a>
+                  </li>
+
+
+
+                  <li style="width:244px;"><form style="max-width: 100%;" enctype="multipart/form-data" method="POST" action="/search/" class="search-form d-inline-block">
+
+                    {% csrf_token %}
+                    <div class="d-flex">
+                      <input type="text" name="query" id="query" class="form-control" placeholder="Search...">
+                      <button type="submit" class="btn btn-secondary" ><span class="icon-search"></span></button>
+                    </div>
+                  </form>
+                </li>
+               <li style="padding-top :1em; padding-bottom:1em;">
+                  <style>
+
+                      .lists{
+                          text-indent:-1.4em;
+                      }
+
+                  </style>
+                <div style="cursor: pointer;" class="dropdown">
+                  <span>সাহিত্য বিশেষ</span>
+                  <div style="margin-bottom: 2rem;" class="dropdown-content">
+                    <ul style="margin-left:-1em">
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/poems/">কবিতা</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/comics/">কমিক্চ্</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/upanyax/">উপন‍্যাস</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/songs/">সংগীত</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/interviews/">কথা-বাৰ্তা</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/comedy/">ব‍্যংগ</a></li>
+                        <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/microstories/">অণুগল্প</a></li>
+
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/stories/">গল্প </a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/more/">More </a></li>
+
+
+
+                    </ul>
+
+                  </div>
+              </div>
+              </li>
+
+              <li style="padding-top :1em; padding-bottom:1em;">
+                <div style="cursor: pointer; " class="dropdown">
+                  <span>প্ৰৱন্ধ</span>
+                  <div style="margin-bottom: 2rem;" class="dropdown-content">
+                    <ul style="margin-left:-1em">
+
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/science/">বিজ্ঞান</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/medical/">চিকিৎসা বিজ্ঞান</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/best_of_xonkhya/">এই সংখ‍্যা বিশেষ</a></li>
+
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/history/">ইতিহাসৰ অনুৰণন</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/awareness/">গণ-জাগৰন</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/sports/">ক্ৰীড়া</a></li>
+
+                    </ul>
+
+
+
+                  </div>
+              </div>
+              </li>
+                </ul>
+              </nav>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--custom card-->
+    <section class="custom" style="margin-top: 90px; background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(176,242,254,1) 97%);">
+    <center><div style="margin-bottom: 4rem; width: 50%; background: transparent; " class="underline">
+
+        <span style="background:#b6f3fe ;">
+          <img  src="{% static 'feather.png' %}" alt="">
+         </span>
+
+         </div></center>
+
+         <center><h1>কথা-বাৰ্তা</h1></center>
+      <section class="cards-wrapper">
+          {% for poem in posts %}
+        <div class="card-grid-space">
+          <div class="num">{{ forloop.counter0|add:posts.start_index }}</div>
+          <a class="card" href="/blog/{{poem.slug}}" style="--bg-img: url(/media/{{poem.ImageTop_optional}})">
+            <div>
+              <h1>{{poem.title}}</h1>
+              <p class="contents1">{{poem.content|truncatechars:100}}</p>
+              <div class="date">{{poem.time}}</div>
+              <div class="tags">
+                <div class="tag">{{poem.xonkhya}}</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+
+
+
+
+
+      </section>
+
+<!--pagination-->
+
+    <center><div style="padding-bottom: 2rem; justify-content: center;" class="pagination">
+
+
+        {% if posts.has_previous %}
+
+        <a style="height:1.9rem" href="?page=1"><button style="font-size:.58rem; margin-top: 0rem; margin-bottom: 0rem; padding-left: .4rem; padding-right: .4rem; height: 1.8rem; margin-left: .1rem; margin-right: .1rem;" class="btn btn-outline-info mb-4"><p>First</p></button></a>
+        <a style="height:1.9rem"  href="?page=1{{ posts.previous_page_number }}"><button style="font-size:.58rem ; margin-top: 0rem; margin-bottom: 0rem; padding-left: .4rem; padding-right: .4rem; height: 1.8rem; margin-left: .1rem; margin-right: .1rem;" class="btn btn-outline-info mb-4"><p>Previous</p></button></a>
+
+
+        {% endif %}
+        {% for num in posts.paginator.page_range %}
+
+        {% if posts.number == num %}
+
+        <a style="height:1.9rem ;color: #8bc34a;"  href="?page={{num}}"><button style=" background:#8bc34a; font-size:.58rem; margin-top: 0rem; margin-bottom: 0rem; padding-left: .4rem; padding-right: .4rem; height: 1.8rem; margin-left: .1rem; margin-right: .1rem;" class="btn btn-info mb-4"><p>{{num}}</p></button></a>
+        {% elif num > posts.number|add:'-3' and num < posts.number|add:'3'  %}
+
+        <a style="height:1.9rem" href="?page={{num}}"><button style="font-size:.58rem; margin-top: 0rem; margin-bottom: 0rem; padding-left: .4rem; padding-right: .4rem; height: 1.8rem; margin-left: .1rem; margin-right: .1rem;" class="btn btn-outline-info mb-4" ><p>{{num}}</p></button></a>
+
+
+        {% endif %}
+
+        {% endfor %}
+        {% if posts.has_next %}
+
+
+        <a style="height:1.9rem"  href="?page={{ posts.next_page_number }}"><button style="font-size:.58rem; margin-top: 0rem; margin-bottom: 0rem; padding-left: .4rem; padding-right: .4rem; height: 1.8rem; margin-left: .1rem; margin-right: .1rem;" class="btn btn-outline-info mb-4"><p>Next</p></button></a>
+        <a style="height:1.9rem"  href="?page={{posts.paginator.num_pages}}"><button style="font-size:.58rem; margin-top: 0rem; margin-bottom: 0rem; padding-left: .4rem; padding-right: .4rem; height: 1.8rem; margin-left: .1rem; margin-right: .1rem;"  class="btn btn-outline-info mb-4"><p>Last</p></button></a>
+
+
+        {% endif %}
+
+
+    </div></center>
+
+
+
+
+
+    <!--//pagination-->
+
+
+
+</section>
+
+
+
+
+
+
+    <!--footer-->
+   <style>
+
+
+    /*custom-footer*/
+
+
+
+
+#footer2{
+    width:100vw;
+    height:41vh;
+    z-index:10;
+    position:relative;
+    bottom:0;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow:hidden;
+    background-image:radial-gradient(rgb(212, 239, 248),rgb(216, 245, 245));
+}
+ #footer2 .consolationNote{
+    z-index:10;
+    color:rgb(0, 62, 87);
+    position: relative;
+    top:0%;
+    text-align: center;
+    font-size:1.1rem;
+    transform:translateY(0vh);
+    line-height:2rem;
+    padding:1rem;
+    font-weight:bold;
+    text-align: left;
+ }
+ #footer2:after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0vh;
+    left:0;
+    background-color:black;
+    opacity:0.1;
+    transform:scale(0);
+    color:white;
+    pointer-events:none;
+    z-index:-1;
+}
+#footer2 .change{
+    text-align:right;
+    font-size:0.8rem;
+    color:rgb(54, 54, 5);
+}
+#footer2:hover:after{
+    transition:1s;
+    transform:scale(1);
+}
+#footer2:hover:after{
+    transition:1s;
+    transform:scale(1);
+}
+@media (max-width: 500px){
+    #footer2{
+        height:40vh;
+    }
+    #footer2 .consolationNote{
+        font-size:0.7rem;
+        transform:translateY(0vh);
+        line-height:1.5rem;
+        padding:0.5rem;
+        text-align: left;
+     }
+     #footer2 .change{
+        font-size:0.5rem;
+     }
+}
+
+</style>
+    <div style=" background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(176,242,254,1) 97%); margin-top: -1rem; padding-top:2.5rem;padding-bottom:0rem; margin-bottom:-5rem" class="site-section subscribe">
+      <div class="container">
+        <center><div style="margin-bottom: 4rem; width: 50%; background: transparent; " class="underline">
+
+          <span style="background: transparent; top:0px ;">
+            <img  src="{% static 'feather.png' %}" alt="">
+           </span>
+           </div></center>
+        <form action="/newsletter/" method="post" class="row align-items-center">{% csrf_token %}
+          <div class="col-md-5 mr-auto">
+            <h2>নিউজ লেটাৰত গ্ৰাহকীভুক্ত হওঁক</h2>
+            {% load socialaccount %}
+             {% providers_media_js %}
+
+            <p>Subscribe To Our Newsletter And Get Notified When There Is A New Post Uploaded To Our Website</p>
+          </div>
+          <div class="col-md-6 ml-auto">
+            <div class="d-flex">
+              <input type="email" id="nlemail" name ="nlemail" class="form-control" placeholder="Enter your email">
+              <button type="submit" class="btn btn-secondary" ><span class="icon-paper-plane"></span></button>
+            </div>
+          </div>
+        </form>
+        <center><a  href="{% provider_login_url 'google' %}"><button style="margin-top: 32px;"  class="btn btn-secondary" >Admin</button></a></center>
+
+
+      </div>
+       <!--custom -footer-->
+    <section id="footer2">
+        <div class="consolationNote" style="color:#638dd1;">
+            <h2>"Samar Hazarika...</h2>
+        </div>
+        <div class="consolationNote">
+            <p>যোৰহাট চিকিৎসা মহাবিদ্যালয়ৰ ছাত্ৰ ছাত্ৰী সকলে এখনি আলোচনী প্ৰকাশ কৰিবলৈ প্ৰস্তুতি কৰিছে ।
+                "কাঁচিয়লি" এটি সুন্দৰ নামেৰে নামাকৰণ কৰাত আনন্দিত হৈছো । এই আলোচনীখনৰ সম্পাদনা বিভাগ আৰু বিষয়ববীয়া সকলোলৈকে মোৰ হিয়াভৰা শুভেচ্ছা জনালো , চিকিৎসাৰ লগে লগে অসমীয়া সাহিত্য সংস্কৃতিক আগবঢ়ায় নিব বুলি মই আশা কৰিলো । শেষত মোৰ আন্তৰিক শুভকামনা ও ধন্যবাদেৰে -" </div>
+        <div class="consolationNote change" style="text-align:right;">
+
+        </div>
+    </section>
+    </div>
+
+
+
+
+
+
+
+    <div class="footer">
+      <div class="container">
+
+
+
+      </div>
+    </div>
+
+
+  </div>
+  <!-- .site-wrap -->
+
+
+  <!-- loader -->
+  <div id="loader" class="show fullscreen">
+    <center><div class="stage" style="width: 120px; height: 120px;">
+    <div class="cubespinner">
+      <div class="face1">কাঁচিয়লি</div>
+      <div class="face2">সংগীত</div>
+      <div class="face3">উপন‍্যাস</div>
+      <div class="face4">বিজ্ঞান</div>
+      <div class="face5">প্ৰশ্নবাণ</div>
+      <div class="face6">ব‍্যংগ</div>
+      <div class="face7">সংগীত</div>
+    </div>
+  </center>
+</div></div>
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
+
+
+
+
+  <script src="{% static 'js/main.js' %}"></script>
+  <script type="text/javascript">
+    document.getElementById('date').value = Date();
+  </script>
+<script>
+  let contents = document.getElementsByClassName('preview');
+  Array.from(contents).forEach((element)=>{
+    element.innerHTML = element.innerText
+
+  })
+</script>
+<script>
+
+
+</script>
+<!--sun-->
+<script>
+
+
+
+</script>
+<!--apply-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+<script>
+
+
+</script>
+<script>
+  let contents1 = document.getElementsByClassName('contents1');
+  Array.from(contents1).forEach((element)=>{
+    element.innerHTML = element.innerText
+
+  })
+</script>
+</body>
+</html>

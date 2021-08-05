@@ -1,0 +1,2168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>কাঁচিয়লি</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link href="{% static 'css/jquery.mb.YTPlayer.min.css' %}" media="all" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Galada&display=swap" rel="stylesheet">
+
+</head>
+<style>
+
+
+body{
+  font-family: 'Alata', sans-serif;
+
+}
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+ font-family: 'Alata', sans-serif;
+
+}
+a, span , button{
+
+ font-family: 'Alata', sans-serif;
+
+
+}
+ul {
+  list-style-type: none;
+}
+
+
+
+.lists {padding-left: 0em; text-indent: -2em;}
+.library .card .cardContainer .cardDiv a span img{
+    height:150px;
+    width:150px;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+
+.library .card .cardContainer .cardDiv .cardContent :hover{
+    color:#638dd1;
+}
+
+
+  /*loader*/
+
+/* Created by Ronak*/
+
+.stage {
+  margin: 100px 50px 50px 50px;
+
+}
+
+@-webkit-keyframes spincube {
+  from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  16%      { -webkit-transform: rotateY(-90deg);                           }
+  33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);            }
+  50%      { -webkit-transform: rotateY(-180deg) rotateZ(90deg);           }
+  66%      { -webkit-transform: rotateY(-270deg) rotateX(90deg);           }
+  83%      { -webkit-transform: rotateX(90deg);                            }
+}
+
+@keyframes spincube {
+  from,to {
+    -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    -moz-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+  }
+  33% {
+    -moz-transform: rotateY(-90deg) rotateZ(90deg);
+    -ms-transform: rotateY(-90deg) rotateZ(90deg);
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    -moz-transform: rotateY(-180deg) rotateZ(90deg);
+    -ms-transform: rotateY(-180deg) rotateZ(90deg);
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    -moz-transform: rotateY(-270deg) rotateX(90deg);
+    -ms-transform: rotateY(-270deg) rotateX(90deg);
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83% {
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+.cubespinner {
+  -webkit-animation-name: spincube;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 12s;
+
+  animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -webkit-transform-origin: 60px 60px 0;
+  -moz-transform-origin: 60px 60px 0;
+  -ms-transform-origin: 60px 60px 0;
+  transform-origin: 60px 60px 0;
+}
+
+.cubespinner div {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,0.9);
+  line-height:200px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.cubespinner .face1 {
+  color: CadetBlue;
+  -webkit-transform: translateZ(60px);
+  -moz-transform: translateZ(60px);
+  -ms-transform: translateZ(60px);
+  transform: translateZ(60px);
+}
+.cubespinner .face2 {
+  color: ForestGreen;
+  -webkit-transform: rotateY(90deg) translateZ(60px);
+  -moz-transform: rotateY(90deg) translateZ(60px);
+  -ms-transform: rotateY(90deg) translateZ(60px);
+  transform: rotateY(90deg) translateZ(60px);
+}
+.cubespinner .face3 {
+  color: blue;
+  -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+  -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+  -ms-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+  transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+}
+.cubespinner .face4 {
+  color: orange;
+  -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+  -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+  -ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+  transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+}
+.cubespinner .face5 {
+  color: red;
+  -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+  -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+  -ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+  transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+}
+.cubespinner .face6 {
+  color: DarkSlateGray;
+  -webkit-transform: rotateX(-90deg) translateZ(60px);
+  -moz-transform: rotateX(-90deg) translateZ(60px);
+  -ms-transform: rotateX(-90deg) translateZ(60px);
+  transform: rotateX(-90deg) translateZ(60px);
+}
+.cubespinner .face7 {
+    color: Yellow;
+    -webkit-transform:rotateX(-90deg)
+    translateZ(60px);
+    -moz-transform: rotate x(-90deg)translateZ(60px);
+    -ms-transform: rotate x(-90deg)translateZ(60px);
+    transform: rotateX(-90deg)
+    translateZ(60px);
+}
+
+
+/*border*/
+         .underline {
+  width: 100%;
+  border-bottom: 4px solid #638dd1;
+  text-align: center;
+  position: relative;
+}
+.underline span {
+  position: relative;
+  top: 15px;
+  padding: 0 10px;
+  background: #fff;
+  font-size:25px;
+}
+
+
+  /*anime*/
+
+svg{
+    width: 500px ;
+    align-self: center;
+    justify-self: center;
+    display:block;
+
+    height: 100%;
+    width:100%;
+}
+
+svg #mujer{
+    animation-duration:.6s;
+    animation-name: meser;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes meser{
+    from{
+        transform: translateX(0) translateY(0);
+
+    }
+    to{
+        transform: translateX(20px) translateY(14px);
+    }
+}
+
+svg #columpio{
+    animation-duration: .6s;
+    animation-name: cuerdas;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes cuerdas{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(10px);
+    }
+}
+
+svg #hojas-arbol{
+    animation-duration: .6s;
+    animation-name: hojas;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes hojas{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.st0{fill:#3F3D56;}
+	.st1{opacity:0.1;enable-background:new    ;}
+	.st2{fill:#FFB9B9;}
+	.st3{fill:#D0CDE1;}
+	.st4{fill:#2F2E41;}
+	.st5{fill:#0C963A;}
+	.st6{fill:#F2F2F2;}
+
+
+.anime{
+    position: relative;
+    display: block;
+    height: 190px;
+    width: 160px;
+}
+
+/*dropdown*/
+.dropdown {
+    width: 10em;
+    height: 3em;
+    padding: 1em 1.5em;
+    box-sizing: border-box;
+    background-image: -moz-linear-gradient( 17deg, rgb(13,5,149) 0%, rgb(75,15,172) 46%, rgb(136,24,194) 100%);
+    background-image: -webkit-linear-gradient( 17deg, rgb(13,5,149) 0%, rgb(75,15,172) 46%, rgb(136,24,194) 100%);
+    background-image: -ms-linear-gradient( 17deg, rgb(13,5,149) 0%, rgb(75,15,172) 46%, rgb(136,24,194) 100%);
+    border-radius: 1.5em;
+
+    color: white;
+    line-height: 1em;
+    text-transform: uppercase;
+
+    font-weight: 500;
+    text-align: center;
+
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: white;
+
+    left: 0;
+
+    background-image: -moz-linear-gradient( 45deg, rgb(13,5,149) 0%, rgb(66,0,255) 46%, rgb(101,12,225) 72%, rgb(136,24,194) 100%);
+    background-image: -webkit-linear-gradient( 45deg, rgb(13,5,149) 0%, rgb(66,0,255) 46%, rgb(101,12,225) 72%, rgb(136,24,194) 100%);
+    background-image: -ms-linear-gradient( 45deg, rgb(13,5,149) 0%, rgb(66,0,255) 46%, rgb(101,12,225) 72%, rgb(136,24,194) 100%);
+
+    width: 100%;
+    padding: 3em 0 0 0;
+    box-sizing: border-box;
+    border-radius: 1.5em;
+    box-shadow: 0.5em 0.5em 1em 0 rgba(0,0,0,0.2);
+
+    z-index: 1;
+    margin-top: 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-itens {
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: block;
+
+    text-align: center;
+    margin: 1em 0;
+}
+/*plalist*/
+.carousel{
+  margin-top:40px;
+}
+/* Make the image fully responsive */
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+.carousel-indicators{
+  display:inline-block;
+  height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position:static;
+  direction: rtl;
+}
+@media screen and (max-width:992px){
+  .carousel-indicators{
+    display: inline-flex;
+    direction: inherit;
+    height: auto;
+    width: 100%;
+    max-width:800px;
+    overflow-x: auto;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    overflow-y: hidden;
+    justify-content: normal;
+    margin-bottom:20px;
+  }
+  .carousel-inner{
+    margin-left:0!important;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.item{
+  margin-bottom:10px;
+  margin-left: 10px;
+  cursor:pointer;
+}
+.item.active img{
+  border:1px solid red;
+  opacity:1;
+}
+.item img{
+  border:1px solid transparent;
+  opacity:0.7;
+  transition:0.5s;
+}
+.item:hover img{
+  border:1px solid red;
+  opacity:1;
+}
+.content {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+}
+.content p{
+  font-size:15px;
+}
+
+@media screen and (max-width: 992px) {
+  .content{
+    position:static;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .carousel-inner{
+    margin-left: -60px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .carousel-inner{
+    margin-left: -20px;
+  }
+}
+@media screen and (min-width: 880px) and (max-width: 1199px) {
+  .carousel-inner{
+    margin-left: 20px;
+  }
+  .content{
+      position: static;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 879px) {
+  .carousel-inner{
+    margin-left: 50px;
+  }
+  .content{
+      position: static;
+  }
+}
+
+
+
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100% 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left {
+-webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
+}
+
+
+
+</style>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <div class="header-top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 d-flex">
+            <a href="/" class="site-logo">
+              <div class="site-logo">
+              <img style="
+
+                height: 146px;
+    width: 172px;
+    position: relative;
+    margin-left: -25px;
+    margin-top: -22px;
+    " src="{% static 'images/logo.png' %}" alt=""></div>
+            </a>
+
+            <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
+
+          </div>
+          <div class="col-12 col-lg-6 ml-auto d-flex">
+            <div class="ml-md-auto top-social d-none d-lg-inline-block">
+              <a href="#" class="d-inline-block p-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="d-inline-block p-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="d-inline-block p-3"><span class="icon-instagram"></span></a>
+            </div>
+
+
+
+          </div>
+          <div class="col-6 d-block d-lg-none text-right">
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
+
+      <div class="container">
+        <div class="d-flex align-items-center">
+
+          <div class="mr-auto">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
+                <li style="margin-left:-1rem" >
+                  <a href="/founders/" class="nav-link text-left">Our Team</a>
+                </li>
+
+
+                <li>
+                  <a href="/contact/" class="nav-link text-left">Contact</a>
+                </li>
+                <li>
+                  <a href="/blog/{{editorial.slug}}" class="nav-link text-left">Editorial</a>
+                </li>
+                <li>
+                    <a href="/quizes/" class="nav-link text-left">Quiz</a>
+                </li>
+
+
+
+                <li style="width:244px;"><form style="max-width: 100%;" enctype="multipart/form-data" method="POST" action="/search/" class="search-form d-inline-block">
+
+                  {% csrf_token %}
+                  <div class="d-flex">
+                    <input style="width:10em" type="text" class="form-control" name="query" id="query" placeholder="Search...">
+                    <button  type="submit" class="btn btn-secondary" ><span class="icon-search"></span></button>
+                  </div>
+                </form>
+              </li>
+              <li style="padding-top :1em; padding-bottom:1em;">
+                  <style>
+
+                      .lists{
+                          text-indent:-1.4em;
+                      }
+
+                  </style>
+                <div style="cursor: pointer;" class="dropdown">
+                  <span>সাহিত্য বিশেষ</span>
+                  <div style="margin-bottom: 2rem;" class="dropdown-content">
+                    <ul style="margin-left:-1em">
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/poems/">কবিতা</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/comics/">কমিক্চ্</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/upanyax/">উপন‍্যাস</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/songs/">সংগীত</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/interviews/">কথা-বাৰ্তা</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/comedy/">ব‍্যংগ</a></li>
+                        <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/microstories/">অণুগল্প</a></li>
+
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/stories/">গল্প </a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;"  class="dropdown-itens" href="/more/">More </a></li>
+
+
+
+                    </ul>
+
+                  </div>
+              </div>
+              </li>
+
+              <li style="padding-top :1em; padding-bottom:1em;">
+                <div style="cursor: pointer; " class="dropdown">
+                  <span>প্ৰৱন্ধ</span>
+                  <div style="margin-bottom: 2rem;" class="dropdown-content">
+                    <ul style="margin-left:-1em">
+
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/science/">বিজ্ঞান</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/medical/">চিকিৎসা বিজ্ঞান</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/best_of_xonkhya/">এই সংখ‍্যা বিশেষ</a></li>
+
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/history/">ইতিহাসৰ অনুৰণন</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/awareness/">গণ-জাগৰন</a></li>
+                      <li class="lists"><a style="color:#ffffff; padding-bottom: 10px; padding-right:0px; padding-left:0px;" class="dropdown-itens" href="/sports/">ক্ৰীড়া</a></li>
+
+                    </ul>
+
+
+
+                  </div>
+              </div>
+              </li>
+              </ul>
+            </nav>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+
+    <div  class="site-section py-0">
+      <div class="owl-carousel hero-slide owl-style">
+
+        <div class="site-section">
+          <div class="container">
+            <div style="min-height: 400px; border-radius:30px;" class="half-post-entry d-block d-lg-flex bg-light">
+              <div class="img-bg" style="background-image: url('https://i.imgur.com/EwBYRf3.jpg'); border-radius:30px;"></div>
+              <div style="padding: 1rem;" class="contents">
+                <span class="caption">{{number.xonkhya}}</span>
+                <h2><a href="/" style="color: #8bc34a;">{{number.title}}</a></h2>
+                <p class="mb-3">{{number.description|truncatechars:560}}</p>
+
+                <div class="post-meta">
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+    <section style="padding-top: 1.3rem; top: 0vh; " class="articleSection">
+      <div class="article">
+      <div style="margin-top: 1.6rem;" class="title">
+          <div class="titleOverlap">
+              <h1 style="margin-top: 0rem; color: black; font-size: xx-large;background: rgb(162, 202, 255);">সাহিত্য</h1>
+          </div>
+          <div style="margin-top: -2.5rem;
+          margin-left: 5rem; text-align: end; width: 85%; " class="underline">
+
+            <span style="background: rgb(162, 202, 255);">
+              <img style="background: rgb(162, 202, 255); width: 2.8rem;" src="{% static 'feather.png' %}" alt="">
+             </span>
+             </div>
+
+
+      </div>
+      <a href="/best_of_xonkhya/">
+      <div class="articleImg">
+        <div class="anime">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg version="1.1" id="aad34d2c-b6e7-481f-91dd-037f78086296"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 855.3 676"
+              style="enable-background:new 0 0 855.3 676;" xml:space="preserve">
+          <g id="arbol">
+          <path class="st0" d="M393.6,23.2c0.5,1.2,0.9,2.4,1.2,3.7C394.2,25,393.7,23.7,393.6,23.2z"/>
+          <path class="st0" d="M411.3,84.4c0,0,0,1.4-1.5,6.4L411.3,84.4z"/>
+          <path class="st0" d="M593.9,292.7c-39.3,20.5-90.8,38.2-106.2,43.3c11.8-3.1,46-7.2,98.9,25.9c66.6,41.5,137.8,13.8,137.8,13.8
+              S708.6,406.1,675,408c-33.6,2-121.3-53.4-151-37.6c-29.7,15.8-43.5-4-55.4,35.6c-11.9,39.5-33.6,147.6-8.6,208.3l25,60.6H342.8
+              c0,0,51.4-137.1,23.1-221.5c-15.9-47.3-38.1-81.5-46.5-98.9c-4.2-8.7-4.8-13.2,0.6-13c3.1,0.1,8.1,1.8,15.6,5
+              c0,0-34.3-33.6-45.5-33.6c-11.2,0-63.9-5.3-81.1-23.1c0,0-24.4-17.1-67.9,25s-33,42.2-71.9,38.9C30.9,350.7,0.9,332.2,0,331.6
+              c1.1,0.5,45.8,18.3,73.2,9.2c27.7-9.2,51.4-44.2,75.8-56c24.4-11.9,38.9-27.7,71.9-10.5L199.1,223l-6-14l0,0
+              c0,0-7.3-96.2-21.1-102.8c-13.8-6.6-5.3-23.7-31-27c0,0,31.6-4,37.6,17.8c5.9,21.8,46.8,139.1,46.8,139.1s25,50.1,52.7,38.2
+              c27.7-11.9-10.5-78.4-10.5-78.4L220.2,174c0,0,35.6-1.3,57.4,19.1c21.8,20.4,23.1,86.4,23.1,86.4s54.7,7.9,67.9,37.6
+              c0,0,8.6-26.4-7.9-42.2c-4.1-4-8.4-10.8-12.6-18.9c-15.8-31.1-21.5-66.3-16.3-100.7c2.5-16.9,4-33.4,1.3-37.2
+              c-5.9-8.6-31-61.3-33-75.2c-2-13.8,2-42.8,2-42.8s0.7,35.6,8.6,46.8c7.9,11.2,30.3,66.6,30.3,66.6s0,69.9,18.5,104.1
+              s54,72.5,52.1,97.6v14.5c0,0,39.5-37.6,36.9-50.1c-2.6-12.5-5.9-42.2-31-60c-25-17.8-41.5-46.1-23.7-87c10-23,14.4-35.3,16.3-41.8
+              l-10.4,44.4c0,0-6.6,45.5,11.9,61.3c0,0,0.1,0.1,0.1,0.1c18.4,15.8,42.7,44.7,42.7,44.7l-0.1-1.3l-5.2-93.6l1.1,2.5l8.2,18l7.8,17
+              c0,0,36.9-47.5,80.4-63.3C590,104.8,617,49.4,617,49.4l36.9-29l-30.3,36.3c0,0-9.2,42.8-61.3,73.2c-52.1,30.3-85.7,75.1-87.7,102.8
+              s-4,52.1-4,52.1s97.6-3.3,119.3-46.1c21.8-42.8,39.6-44.8,39.6-44.8L617,230.7l-13.8,31.6c0,0,56.7,1.3,86.3,34.9
+              c29.7,33.6,103.5,43.5,103.5,43.5L751.5,352c0,0-39.6-13.2-77.1-37.6S640.7,268.3,593.9,292.7z"/>
+          <path class="st1" d="M614.9,202.7c-4.2,18.5-9.1,36.3-16,49.9c-21.8,42.9-119.3,46.1-119.3,46.1s0.5-5.7,1.2-14.6
+              c24.8-2,92.5-10.8,110.2-45.6c1.6-3.2,3.1-6.6,4.5-10.2L614.9,202.7z"/>
+          <path class="st1" d="M463.2,255.3c0,0-24.4-29-42.8-44.8c-4-3.5-6.9-8.4-8.9-13.9c-0.2-0.4-0.3-0.9-0.5-1.3
+              c0.4,0.4,0.9,0.8,1.3,1.2c16.2,13.9,36.9,37.8,41.8,43.6c0.7,0.8,1.1,1.3,1.1,1.3l-5.1-92.4l8.2,18L463.2,255.3z"/>
+          <path class="st1" d="M477.3,172c-0.1,16.2-2.3,25.9-2.3,25.9s36.9-47.4,80.4-63.3c2.6-1.6,5.2-3.2,7.8-4.8
+              c52.1-30.3,61.3-73.2,61.3-73.2l30.3-36.3l-36.9,29c0,0-27,55.4-70.5,71.2C517.8,131.4,491.2,156.9,477.3,172z"/>
+          <path class="st1" d="M420.3,329.1v14.5c0,0,39.6-37.6,36.9-50.1c-2-9.6-4.4-29.2-16.7-45.8c5.5,12.6,7.2,24.9,8.7,31.8
+              c1.9,9-17.9,30.8-29.3,42.5C420.4,324.3,420.5,326.7,420.3,329.1z"/>
+          <path class="st1" d="M367.3,229.6c0.3,0.7,0.6,1.3,1,2c10.1,18.8,25.3,38.7,36.8,57.1C395.8,270.4,379.7,249.7,367.3,229.6z"/>
+          <path class="st1" d="M587.7,361.9c-21.7-13.5-40.2-20.8-55.4-24.5c-15.9,6-29,10.4-35.5,12.6c11.8-3.1,46-7.1,98.9,25.9
+              c41.5,25.9,84.8,24.9,111.6,20.4c7.4-5.6,13.6-12.6,18.2-20.6C725.4,375.7,654.2,403.4,587.7,361.9z"/>
+          <path class="st1" d="M399.4,201.5c-5.3-13-6.2-28.5-0.1-46.7c-0.1-6.6,0.3-13.2,1.1-19.7l10.4-44.4c-1.9,6.4-6.3,18.8-16.3,41.8
+              C381.8,161.6,386.6,184.4,399.4,201.5z"/>
+          <path class="st1" d="M690.5,297.3c-20.6-23.3-54.1-31.1-72.8-33.7l-5.6,12.7c0,0,56.7,1.3,86.4,34.9c16.4,18.6,46.5,30,70,36.4
+              l25.5-6.9C794,340.8,720.2,330.9,690.5,297.3z"/>
+          <path class="st1" d="M287.2,288.2c27.7-11.9-10.5-78.4-10.5-78.4l-1-0.5c9.5,20.1,23.4,56.5,3.6,64.9
+              c-18.5,7.9-35.8-11.8-45.3-25.8c0.3,1,0.5,1.5,0.5,1.5S259.5,300.1,287.2,288.2z"/>
+          <path class="st1" d="M377.5,331.1c0,0,8.3-25.7-7.3-41.6c3.8,13.7-0.7,27.6-0.7,27.6c-10.2-22.9-45.2-32.9-60.6-36.2
+              c0.6,7.6,0.7,12.6,0.7,12.6S364.3,301.4,377.5,331.1z"/>
+          <path class="st1" d="M410.8,90.7c1.5-5,1.5-6.4,1.5-6.4L410.8,90.7z"/>
+          <path class="st1" d="M81.8,354.9c0.1,0,0.3-0.1,0.4-0.1c27.7-9.2,51.4-44.2,75.8-56s38.9-27.7,71.9-10.5c0,0-5.8-23.6-16.9-39.1
+              c3.7,8.1,6.7,16.5,8.9,25.1c-33-17.1-47.5-1.3-71.9,10.5s-48.1,46.8-75.8,56S1,331.6,1,331.6s30.3,19.1,69.2,22.4
+              C74.6,354.4,78.4,354.7,81.8,354.9z"/>
+          <path class="st1" d="M202.1,223c0,0-1.1,0-3,0l-6-14c0.6,0,1,0,1,0s-4.6-60.7-13.4-89c0.1,0.1,0.2,0.1,0.3,0.2
+              C194.9,126.7,202.1,223,202.1,223z"/>
+          <path class="st1" d="M356.6,675c12.1-37,41.1-139.4,18.3-207.5c-9.9-29.4-19-48.1-26.8-60.1c5.8,11.3,12.1,26.3,18.8,46.1
+              c28.3,84.4-23.1,221.5-23.1,221.5H356.6z"/>
+          <path class="st1" d="M344.5,360.7c-8-3.5-16.5-5.6-25.1-6.1c-4.2-8.7-4.8-13.2,0.6-13c1.5,0.3,3,0.6,4.5,1
+              C335.1,351.5,344.5,360.7,344.5,360.7z"/>
+          <path class="st1" d="M166.1,99.7c0.8,1.3,1.7,2.4,2.7,3.5C168,101.9,167.1,100.8,166.1,99.7z"/>
+          <path class="st1" d="M286.5,207.1c1,1,2,2,2.9,3.1c-2.9-6.9-6.5-12.9-10.9-17.1c-21.8-20.4-57.3-19.1-57.3-19.1l44.6,20.5
+              C273.4,197.3,280.5,201.6,286.5,207.1z"/>
+          <path class="st1" d="M333.9,118c2.7,3.9,1.2,20.4-1.3,37.2c-5.2,34.5,0.5,69.7,16.3,100.7c2.1,4.2,4.4,8.2,7,12.1
+              c-15.1-30.6-20.4-65.1-15.4-98.8c2.5-16.9,4-33.4,1.3-37.2c-5.9-8.6-31-61.3-33-75.1c-0.6-5.4-0.7-10.8-0.4-16.2
+              C303.4,26.1,302.9,0,302.9,0s-4,29-2,42.8S327.9,109.4,333.9,118z"/>
+          <path class="st1" d="M395.7,26.9c-0.3-1.3-0.7-2.6-1.2-3.8C394.5,23.1,395,24.5,395.7,26.9z"/>
+          <path class="st1" d="M162.9,93.3c5.8,0.7,12.5,2.5,17.6,6.6c-0.3-1.1-0.6-2.1-0.9-3C173.7,75.1,142,79.1,142,79.1
+              C156.3,80.9,160,87.1,162.9,93.3z"/>
+      </g>
+      <g id="columpio">
+          <path class="st0" d="M597.3,584.9h-2V366c0-1.8-0.8-3.5-2.2-4.7l1.3-1.6c1.9,1.5,3,3.8,2.9,6.2V584.9z"/>
+          <path class="st0" d="M589.3,599c-4.4,0-8-3.6-8-8V366c0-4.4,3.6-8,8-8c1.8,0,3.6,0.6,5.1,1.8l-1.3,1.6c-2.6-2.1-6.3-1.7-8.4,0.9
+              c-0.9,1.1-1.3,2.4-1.3,3.8v225c0,3.3,2.7,6,6,6V599z"/>
+      </g>
+      <rect id="suelo" x="49.3" y="674" class="st0" width="806" height="2"/>
+      <g id="mujer">
+          <path class="st2" d="M618.7,530c0,0,11.3-11.9,15.9-9.5s-13.3,13-13.3,13L618.7,530z"/>
+          <path class="st1" d="M618.7,530c0,0,11.3-11.9,15.9-9.5s-13.3,13-13.3,13L618.7,530z"/>
+          <path class="st3" d="M584.2,504.1c0,0-4.2,7.5-3.1,15.5c1.1,8,11,33.8,14.4,33.4S624,534,624,534l-4.8-6.7l-18.3,11.1
+              C600.9,538.5,598.2,498.8,584.2,504.1z"/>
+          <path class="st4" d="M652.1,522.3l-28.5,15.7c-0.6,0.4-1.5,0.2-1.9-0.4c0-0.1-0.1-0.1-0.1-0.2l-7-14.6c-0.3-0.9,0.1-1.8,0.9-2.2
+              l23.7-12.2c0.6-0.4,1.4-0.2,1.8,0.3l11.8,11.2C653.3,520.7,653,521.7,652.1,522.3C652.2,522.2,652.1,522.2,652.1,522.3z"/>
+          <polygon class="st5" points="650.2,520.1 623.5,535.4 616.3,522.6 639.3,510.1 	"/>
+
+              <ellipse transform="matrix(0.6407 -0.7678 0.7678 0.6407 -170.2966 667.0309)" class="st6" cx="627.5" cy="515.5" rx="0.4" ry="0.3"/>
+
+              <ellipse transform="matrix(0.6407 -0.7678 0.7678 0.6407 -176.8073 679.3759)" class="st6" cx="637.4" cy="528.6" rx="0.3" ry="0.2"/>
+          <path class="st1" d="M584.2,504.1c0,0-4.2,7.5-3.1,15.5c1.1,8,11,33.8,14.4,33.4S624,534,624,534l-4.8-6.7l-18.3,11.1
+              C600.9,538.5,598.2,498.8,584.2,504.1z"/>
+          <path class="st2" d="M611.1,532.3c0,0,12.8-10.2,17.1-7.3c4.3,3-14.9,11.1-14.9,11.1L611.1,532.3z"/>
+          <circle class="st2" cx="594" cy="478.9" r="12.4"/>
+          <path class="st2" d="M636.7,565.1c0,0,13.2,1.7,12.8,9.8s-10.2,41.8-10.2,41.8l-0.9,13.2c0,0,0.9,22.2-1.7,21.8
+              c-2.6-0.4-8.5-15.8-8.5-15.8s-7.3-4.7-3.8-9s6-3.8,5.1-8.5s-0.4-24.3,2.1-30.3c2.6-6,4.1-9.3,4.1-9.3l-8.3-0.5L636.7,565.1z"/>
+          <path class="st1" d="M636.7,565.1c0,0,13.2,1.7,12.8,9.8s-10.2,41.8-10.2,41.8l-0.9,13.2c0,0,0.9,22.2-1.7,21.8
+              c-2.6-0.4-8.5-15.8-8.5-15.8s-7.3-4.7-3.8-9s6-3.8,5.1-8.5s-0.4-24.3,2.1-30.3c2.6-6,4.1-9.3,4.1-9.3l-8.3-0.5L636.7,565.1z"/>
+          <path class="st2" d="M637.6,567.3c0,0,12.8,3,14.1,11.5s7.7,33.7,7.7,33.7l6.8,15.8c0,0,10.7,19.2,6,18.8s-11.1-9.8-13.2-9.8
+              s-8.5-2.6-8.1-4.3c0.4-1.7,3.4-6.8,3.4-6.8l-10.3-18c-2-3.5-3.5-7.2-4.5-11.1c-1.1-4.2-2.3-9.4-2.3-11c0-3-8.5-4.3-8.5-4.3
+              L637.6,567.3z"/>
+          <path class="st4" d="M595.7,540l6,17.1c0,0,9.4,2.6,16.2,4.7s19.6-0.9,20.9,4.3s-2.6,14.1-6.4,16.2c-3.8,2.1-6,4.3-18.3,0.9
+              s-41.8-4.3-41.8-4.3c-2.9,1.7-6.1,2.7-9.4,3c-5.5,0.4-6.8,0.9-8.5-0.4s0.9-1.3,1.7-4.7c0.9-3.4,1.3-2.1,5.1-6s6.8-15.4,9-19.2
+              s3.4-11.5,3.4-11.5L595.7,540z"/>
+          <path class="st2" d="M594.9,489.2c-3.1,2.3-5,5.9-5.1,9.8c0,6.4-12.8-6.8-12.8-6.8s6.8-8.5,6.8-11.1S594.9,489.2,594.9,489.2z"/>
+          <path class="st3" d="M578.7,486.6c0,0,7.7,3,9.4,7.3s8.1,13.2,8.1,13.2s9,9.4,6,19.6c-3,10.2-5.5,12.8-5.5,14.5
+              c0,1.7-4.3,4.7-7.7,4.3c-3.4-0.4-16.2-2.1-17.1-3.8c-0.9-1.7-6-26-2.6-35C572,499.8,575.2,493.1,578.7,486.6z"/>
+          <path class="st4" d="M597.6,479.5c2.8,0.7,5.5-1.1,7.8-2.9c1.3-1,2.7-2.4,2.3-4c-0.4-1.4-2-2.2-2.3-3.7c-0.2-1,0.4-2,0.5-3
+              c-0.1-1.6-1-3-2.5-3.6c-1.3-0.7-2.9-1-4.3-1.7c-2.1-1-3.9-2.8-6.1-3.4c-3.1-0.8-6.2,0.9-9.4,1.1c-1.9,0.1-3.9-0.3-5.8,0
+              c-3.7,0.8-6.5,4-6.6,7.8c0,1.4,0.2,2.9-0.6,4c-0.3,0.4-0.7,0.7-1.1,1c-2.8,2.3-4.1,6.1-4.3,9.8c-0.1,1.8,0.3,4,1.9,4.7
+              c0.9,0.3,1.8,0.4,2.7,0.4c0.9,0,1.8,0.4,2.4,1.1c0.7,1.3-0.4,3.2,0.6,4.3c0.7,0.8,2.1,0.6,3-0.2s1.4-1.8,2.2-2.5
+              c1.5-1.5,3.8-1.8,6-2c0.6,0,1.2-0.2,1.7-0.6c0.4-0.4,0.6-0.9,0.7-1.5c0.3-1.3,0.3-2.6,0-3.9c-0.1-0.4-0.2-0.8,0-1.2
+              c0.1-0.3,0.4-0.5,0.6-0.7c1.3-1,3.6-2.4,5.3-2.2C594.2,477.1,595.7,479,597.6,479.5z"/>
+          <path class="st3" d="M580.4,502c0,0-5.1,6.8-5.1,14.9c0,8.1,6.4,35,9.8,35s30.7-14.9,30.7-14.9l-3.8-7.3l-19.6,8.5
+              C592.3,538.3,594.9,498.6,580.4,502z"/>
+          <rect x="540.3" y="579" class="st5" width="98" height="19"/>
+          <ellipse transform="matrix(0.7797 -0.6262 0.6262 0.7797 -168.841 462.1376)" class="st5" cx="572.3" cy="471" rx="1" ry="3"/>
+      </g>
+      <g id="hojas-suelo">
+          <path class="st0" d="M784.5,641.1c-9.8,15.1-7.1,34.3-7.1,34.3s18.6-5.3,28.5-20.3c9.8-15.1,7.1-34.3,7.1-34.3
+              S794.3,626.1,784.5,641.1z"/>
+          <path class="st5" d="M791.9,643.8c-0.8,18-14.1,32-14.1,32s-12.1-15.1-11.3-33.1s14.1-32,14.1-32S792.7,625.8,791.9,643.8z"/>
+          <path class="st0" d="M488.5,641.1c-9.8,15.1-7.1,34.3-7.1,34.3s18.6-5.3,28.5-20.3c9.8-15.1,7.1-34.3,7.1-34.3
+              S498.3,626.1,488.5,641.1z"/>
+          <path class="st5" d="M495.9,643.8c-0.8,18-14.1,32-14.1,32s-12.1-15.1-11.3-33.1s14.1-32,14.1-32S496.7,625.8,495.9,643.8z"/>
+          <path class="st0" d="M326.7,646.8c4.7,17.4,20.8,28.1,20.8,28.1s8.5-17.4,3.8-34.8c-4.7-17.4-20.8-28.1-20.8-28.1
+              S322,629.5,326.7,646.8z"/>
+          <path class="st5" d="M333.6,643.1c12.9,12.6,14.5,31.9,14.5,31.9s-19.3-1.1-32.2-13.6c-12.9-12.6-14.5-31.9-14.5-31.9
+              S320.7,630.6,333.6,643.1z"/>
+      </g>
+      <g id="hojas-arbol">
+          <path class="st5" d="M290.9,172c-1.1,18-14.7,31.7-14.7,31.7s-11.8-15.4-10.7-33.3s14.7-31.7,14.7-31.7S292,154.1,290.9,172z"/>
+          <path class="st5" d="M149,58.5c15.2,9.6,20.8,28.1,20.8,28.1s-19.1,3-34.4-6.6s-20.8-28.1-20.8-28.1S133.7,48.9,149,58.5z"/>
+          <path class="st5" d="M115,277.5c15.2,9.6,20.8,28.1,20.8,28.1s-19.1,3-34.4-6.6s-20.8-28.1-20.8-28.1S99.7,267.9,115,277.5z"/>
+          <path class="st5" d="M424.5,90.5c-4.6,17.4-20.6,28.3-20.6,28.3s-8.6-17.4-4-34.8s20.6-28.3,20.6-28.3S429.1,73.1,424.5,90.5z"/>
+          <path class="st5" d="M569.3,104.1c-5.4,17.2-21.9,27.3-21.9,27.3s-7.8-17.7-2.4-34.9S567,69.2,567,69.2S574.7,86.9,569.3,104.1z"/>
+          <path class="st5" d="M725.9,295.2c-9.8,15.1-28.4,20.4-28.4,20.4s-2.8-19.2,7-34.3s28.4-20.4,28.4-20.4S735.6,280.1,725.9,295.2z"
+              />
+      </g>
+      </svg>
+
+      </div>
+      </div>
+      </a>
+      <div class="articleContent">
+          <div class="articleTitle">
+              <h3  style="margin-top: 1rem; color:#262335; font-size: x-large;">{{number.xonkhya}} </h3>
+          </div>
+          <span class="date-read"> <span class="mx-1">&bullet;</span>{{best.first.title|truncatechars:25}}  <span class="icon-star2"></span></span>
+          <span class="date-read"> <span class="mx-1">&bullet;</span>{{best.first.author|truncatechars:25}}  <span class="icon-star2"></span></span>
+          <div class="articleInfo">
+              <div class="info">
+                <div class="aricleAuthor"><h6><a  href="/best_of_xonkhya/"><button style="margin-top: 2px;"  class="btn btn-secondary" >বিশেষ</button></a></h6></div>
+                 <div class="articleDate"><h6>{{number.time|truncatechars:12}}</h6></div>
+              </div>
+              <div class="articleLikes"><h6></h6></div>
+          </div>
+      </div>
+      </div>
+  </section>
+
+
+
+
+    <div style="background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 36%, rgba(176,242,254,1) 90%); margin-top: 0px;" class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-12">
+                <div class="section-title">
+                  <h2>শেহতীয়া :</h2>
+                </div>
+              </div>
+            </div>
+            {% for post in postshuffle|slice:":1" %}
+            <div class="row">
+              <div class="col-md-6">
+                <div class="post-entry-1">
+                  <a href="/blog/{{post.slug}}"><img src="/media/{{post.ImageTop_optional}}" alt="Image" class="img-fluid"></a>
+                  <h2><a href="/blog/{{post.slug}}">{{post.title}}</a></h2>
+                    <div class="preview">{{post.content|truncatechars:200 }}</div>
+                  <div class="post-meta">
+                    <span class="d-block"><a href="#">{{post.author}}</a> <a href="#"></a></span>
+                    <span class="date-read">{{post.time}} <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+
+
+
+
+
+
+
+              <div class="col-md-6">
+
+
+                {% for post in postshuffle|slice:":4"  %}
+                {% if not forloop.first %}
+                <div class="post-entry-2 d-flex">
+                  <div class="thumbnail" style="background-image: url('/media/{{post.ImageTop_optional}}')"></div>
+                  <div class="contents">
+                    <h2><a href="blog/{{post.slug}}">{{post.title|truncatechars:200}}</a></h2>
+                    <div class="post-meta">
+                      <span class="d-block"><a href="/profile/{{post.author.name}}">{{post.author}}</a><a href="#"></a></span>
+                      <span class="date-read">{{post.time}}<span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                    </div>
+                  </div>
+                </div>
+
+                {% endif %}
+                {% endfor %}
+
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="section-title">
+              <h2>Topics</h2>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start">01</div>
+              <div class="trend-contents">
+                <h2><a href="/blog/{{editorial.slug}}">সম্পাদকীয়</a></h2>
+                <div class="post-meta">
+                  <span class="d-block"><a href="/science/">{{editorial.title|truncatechars:25}}</a></span>
+                  <span class="date-read"> <span class="mx-1">&bullet;</span>{{editorial.author|truncatechars:25}}  <span class="icon-star2"></span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start">02</div>
+              <div class="trend-contents">
+                <h2><a href="/science/">বিজ্ঞান</a></h2>
+                <div class="post-meta">
+                  <span class="d-block"><a href="/science/">{{bigyan.first.title|truncatechars:25}}</a></span>
+                  <span class="date-read"> <span class="mx-1">&bullet;</span>{{bigyan.first.author|truncatechars:25}}  <span class="icon-star2"></span></span>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start">03</div>
+              <div class="trend-contents">
+                <h2><a href="/medical/">চিকিৎসা বিজ্ঞান</a></h2>
+                <div class="post-meta">
+                  <span class="d-block"><a href="/medical/">{{medical.first.title|truncatechars:25}}</a></span>
+                  <span class="date-read"> <span class="mx-1">&bullet;</span>{{medical.first.author|truncatechars:25}}  <span class="icon-star2"></span></span>
+                </div>
+              </div>
+            </div>
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start">04</div>
+              <div class="trend-contents">
+                <h2><a href="/songs/">সংস্কৃতিৰ ৰহণ</a></h2>
+                <div class="post-meta">
+                  <span class="d-block"><a href="/songs/">{{song.first.title|truncatechars:25}}</a></span>
+                  <span class="date-read"> <span class="mx-1">&bullet;</span> {{song.first.author|truncatechars:25}} <span class="icon-star2"></span></span>
+                </div>
+              </div>
+            </div>
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start">05</div>
+              <div class="trend-contents">
+                <h2><a href="/history/">ইতিহাসৰ অনুৰণন</a></h2>
+                <div class="post-meta">
+                  <span class="d-block"><a href="/poems/">{{history.first.title|truncatechars:25}}</a> </span>
+                  <span class="date-read"> <span class="mx-1">&bullet;</span> {{history.first.author|truncatechars:25}} <span class="icon-star2"></span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start">06</div>
+              <div class="trend-contents">
+                <h2><a href="/education/">শিক্ষা</a></h2>
+                <div class="post-meta">
+                  <span class="d-block"><a href="/education/">{{education.first.title|truncatechars:25}}</a>  </span>
+                  <span class="date-read"> <span class="mx-1">&bullet;</span>{{education.first.author|truncatechars:25}} <span class="icon-star2"></span></span>
+                </div>
+              </div>
+            </div>
+             <div class="trend-entry d-flex">
+              <div class="number align-self-start">07</div>
+              <div class="trend-contents">
+                <h2><a href="/awareness/">গণ-জাগৰন</a></h2>
+                <div class="post-meta">
+                  <span class="d-block"><a href="/upanyax/">{{awarness.first.title|truncatechars:25}}</a> </span>
+                  <span class="date-read"> <span class="mx-1">&bullet;</span> {{awarness.first.author|truncatechars:25}} <span class="icon-star2"></span></span>
+                </div>
+              </div>
+            </div>
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start">08</div>
+              <div class="trend-contents">
+                <h2><a href="/bhoutik/">ভৌতিক গল্প</a></h2>
+                <div class="post-meta">
+                  <span class="d-block"><a href="/bhoutik/">{{bhoutik.first.title|truncatechars:25}}</a>  </span>
+                  <span class="date-read"> <span class="mx-1">&bullet;</span>{{bhoutik.first.author|truncatechars:25}} <span class="icon-star2"></span></span>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <p>
+              <a href="/more/" class="more">See More Topics <span class="icon-keyboard_arrow_right"></span></a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END section -->
+    <div style="margin-top: 9px; padding: 0;background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 36%, rgba(176,242,254,1) 90%); padding-top: 12px;"  class="site-section">
+      <div style="margin-top:60px ; margin-bottom: -20px;" class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="section-title">
+              <h2>Most Liked </h2>
+            </div>
+            {% for post in postsliked|slice:":1"  %}
+
+
+            <div class="post-entry-2 d-flex">
+              <div class="thumbnail order-md-2" style="background-image: url('/media/{{ post.ImageTop_optional }}')"></div>
+              <div style="margin-left: 1rem;" class="contents order-md-1 pl-0">
+                <h2><a href="/blog/{{post.slug}}">{{post.title}}</a></h2>
+                <p class="mb-3">{{post.content|truncatechars:200 }}</p>
+                <div class="post-meta">
+                  <span class="d-block"><a href="#">{{post.author}} </a><a href="#"></a></span>
+                  <span class="date-read">{{post.time}} <span style="color:e74c3c ;" class="mx-1">&bullet;</span> {{post.likepost_set.all|length}} Likes <span style="color:e74c3c ;" class="icon-star2"></span></span>
+                  <a style="color:#8bc34a ;" href="/blog/{{post.slug}}" class="more">Read More <span class="icon-keyboard_arrow_right"></span></a>
+                </div>
+              </div>
+            </div>
+
+            {% endfor %}
+
+          </div>
+          <div class="col-lg-3">
+            <div class="section-title">
+              <h2>Most Commented</h2>
+            </div>
+
+            {% for post in postscommented|slice:":1" %}
+
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start">{{forloop.counter}}</div>
+              <div class="trend-contents">
+                <h2><a href="/blog/{{post.slug}}">{{post.title|truncatechars:200}}</a></h2>
+                <div class="post-meta">
+                  <span class="d-block"><a href="/profile/{{post.author.name}}">{{post.author}}</a>  <a href="#"></a></span>
+                  <span class="date-read">{{post.title}} <span class="mx-1">&bullet;</span> {{post.comment_set.all|length}} Comments <span class="icon-star2"></span></span>
+                </div>
+              </div>
+            </div>
+
+            {% endfor %}
+
+
+            <p>
+
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <div style="margin-top: 0rem; background: #DCF5FF;" class="py-0">
+      <center><div style="margin-bottom: 4rem; width: 50%; background: #DCF5FF; " class="underline">
+
+        <span style="background: #DCF5FF;">
+          <img style="background:#DCF5FF ;" src="{% static 'feather.png' %}" alt="">
+         </span>
+         </div></center>
+
+
+          <!--plalist-->
+
+          <div class="container-fluid">
+
+  <div id="demo" class="carousel slide vert" data-ride="carousel" data-interval="3000">
+
+    <center><div style="padding-bottom: 40px" class="row no-gutters">
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+        <div class="carousel-indicators">
+          <div  data-target="#demo" data-slide-to="0" class="item active"><img style="background-size: cover;
+            width: 143px; height:95px;
+            " src="/media/{{ interviews.first.ImageTop_optional }}" alt=""></div>
+            {% for post in interviews|slice:"1:6" %}
+
+
+          <div data-target="#demo" data-slide-to="{{forloop.counter}}" class="item"><img style="background-size: cover;
+            width: 143px; height:95px" src="/media/{{ post.ImageTop_optional }}" alt=""></div>
+          {% endfor %}
+
+        </div>
+      </div><!-- col-sm-4 Indicators -->
+
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+        <div style="min-height: 95%" class="carousel-inner">
+          <div style="min-height:85%; min-width:40%" class="carousel-item active">
+            <img style="background-size:contain; " src="/media/{{ interviews.first.ImageTop_optional }}" alt="">
+            <div class="content">
+              <h4>{{interviews.first.title}}</h4>
+              <p class="preview">{{interviews.first.content|truncatechars:200 }}</p>
+              <a href="/blog/{{interviews.first.slug}}"><button class="btn btn-secondary" >Read More</button></a>
+            </div>
+          </div>
+          {% for post in interviews|slice:"1:6" %}
+          <div style="min-height:85%; min-width:40%" class="carousel-item">
+            <img style="background-size:contain; "  src="/media/{{ post.ImageTop_optional }}" alt="">
+            <div class="content">
+              <h4>{{post.title}}</h4>
+              <p class="preview">{{post.content|truncatechars:160 }}</p>
+              <a href="/blog/{{post.slug}}"><button class="btn btn-secondary" >Read More</button></a>
+            </div>
+          </div>
+          {% endfor %}
+        </div><!--inner-->
+      </div><!-- col-sm-6  -->
+      <div style="padding-left: 1.7rem; padding-right: 1.7rem;" class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 mt-2">
+        <h3><strong>কথা-বাৰ্তা</strong></h3>
+        <p>শিল্প গঢ়ে শিল্পীয়ে,আঙুলিৰ বোলত ৰৈ যায় সুন্দৰতাৰ সাধনা....শিল্পীৰ সেই সাধনাৰ সোণোৱালী যাত্ৰাৰ অনুভৱ আৰু উপলব্ধি শিল্পীৰ নিজৰ মুখেদি আখৰৰ ৰূপত শুনিবলৈ পোৱা পৃষ্ঠাটিয়ে কথা-বাৰ্তা...কলাৰ সাধকৰ বাক্যৰ যোগেদি খোদিত হোৱা এক অনন্য অনুপম শিল্পকলা...</p>
+        <a href="/interviews/"><button class="btn btn-secondary" >More</button></a>
+
+      </div>
+
+
+    </div></center><!--row-->
+  </div><!--container--></div>
+
+
+          <!--playlist-->
+
+    </div>
+
+
+    <section  style="padding-top: 1.3rem; top: 0vh; margin-top: 0px; background: #bdfffe;" class="articleSection">
+      <div class="article">
+      <div style="background: #bdfffe;" class="title">
+          <div style="background: #bdfffe;" class="titleOverlap">
+              <h1 style="margin-top: 0rem; color: black; font-size: xx-large;background: #bdfffe">প্ৰশ্নবাণ</h1>
+          </div>
+          <div style="margin-top: -2.5rem;
+          margin-left: 5rem; text-align: end; width: 85%; " class="underline">
+
+            <span style="background: #bdfffe;">
+              <img style="background: #bdfffe; width: 2.8rem;" src="{% static 'feather.png' %}" alt="">
+             </span>
+             </div>
+
+
+      </div>
+      <a href="/quizes/">
+      <div class="articleImg">
+        <div class="anime">
+         <svg style="position: absolute;
+         top: 50%;
+         margin-top: -96px;
+         margin-left: -96px;
+         left: 50%;" id="ef672dd0-2e16-4c9d-8107-606b55e40777" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="844.67538" height="595.26155" viewBox="0 0 844.67538 595.26155"><circle cx="431.39281" cy="548" r="46" fill="#00b0ff"/><path d="M883.86176,743.78487c25.7345-7.72868,53.09381-15.78786,73.50313-34.161,18.23763-16.41813,30.55024-41.48912,22.99475-66.1115-7.54-24.57187-30.12421-40.95629-53.44165-49.10532-13.225-4.62188-27.06087-7.18608-40.89147-9.20037-15.03485-2.18967-30.13615-3.98373-45.23026-5.71012q-91.67724-10.48563-184.04386-12.811c-30.38456-.76525-60.76358-.74682-91.15243-.3057-27.13937.394-55.72215.38417-80.899-11.15051-19.57846-8.96979-37.348-25.28881-42.8033-46.73352-6.29728-24.75467,5.318-49.96382,21.97993-67.892,8.78265-9.45011,19.04731-17.40385,29.63621-24.71743,11.4874-7.93416,23.37539-15.30643,35.52084-22.18813a494.63414,494.63414,0,0,1,74.7667-34.4685c12.74555-4.63445,25.68047-8.63281,38.72759-12.32143,11.017-3.11469,22.06832-6.23382,32.71588-10.47748,20.58349-8.20371,40.161-22.09985,45.39464-44.88142,4.96024-21.59145-3.40305-45.03067-18.065-61.07057-16.96282-18.557-42.53949-26.69181-67.06007-28.008-27.52842-1.47765-54.42246,5.412-80.29678,14.15585-27.59673,9.326-54.59854,20.04924-82.77827,27.60322a556.95783,556.95783,0,0,1-85.19574,15.83655c-14.08227,1.49951-28.59019,3.19273-42.75626,2.04475-11.87246-.96211-23.68426-4.45375-32.43408-12.87964-7.50252-7.22477-11.97184-17.154-10.4353-27.63238.27909-1.90318,3.17022-1.09407,2.89284.79752-1.8704,12.75513,6.79991,24.50863,17.48415,30.5293,12.34817,6.95832,27.37408,6.9678,41.1218,6.172a537.82528,537.82528,0,0,0,88.51452-12.79561c28.59252-6.53059,56.16382-15.86633,83.70391-25.83908,26.15594-9.47153,52.89665-18.71579,80.84009-20.76729,24.24611-1.78007,49.75165,1.75222,70.87426,14.42313,18.56387,11.136,32.21482,29.70722,36.56451,51.01813,4.25044,20.82462-1.63632,41.785-17.4,56.31714-16.32147,15.04633-38.7007,21.47909-59.55655,27.40368-26.45223,7.51437-52.33726,16.29809-77.39248,27.7031a485.82354,485.82354,0,0,0-72.8001,40.92805c-22.24625,15.20228-44.2007,34.33058-51.23658,61.45126-3.27739,12.63313-2.67227,26.03212,2.8116,37.96461,4.87605,10.60993,12.90656,19.53469,22.26169,26.41853,22.32074,16.42443,50.45266,19.79665,77.41421,20.13212,30.28143.37678,60.56382-.64518,90.85508-.148q92.5988,1.51977,184.81863,11.27265,23.108,2.44594,46.15759,5.40711c13.82158,1.776,27.68967,3.54058,41.27849,6.69464,24.16222,5.60822,47.67389,16.39167,62.69178,36.878a61.31938,61.31938,0,0,1,11.94709,30.44593c1.05134,11.52384-1.76985,23.0693-6.98016,33.32083-11.53233,22.69042-33.13363,37.12286-56.07337,46.60471-12.28683,5.0786-25.03167,8.926-37.7516,12.74609-1.853.55651-2.64487-2.338-.79752-2.89283Z" transform="translate(-177.66231 -152.36922)" fill="#f2f2f2"/><circle cx="125.89281" cy="69.5" r="24" fill="#f2f2f2"/><circle cx="292.39281" cy="115" r="24" fill="#f2f2f2"/><circle cx="433.39281" cy="24" r="24" fill="#f2f2f2"/><circle cx="521.39281" cy="126" r="24" fill="#f2f2f2"/><circle cx="402.39281" cy="244" r="24" fill="#f2f2f2"/><circle cx="251.39281" cy="301" r="24" fill="#f2f2f2"/><circle cx="411.39281" cy="390" r="24" fill="#f2f2f2"/><circle cx="583.39281" cy="440" r="24" fill="#f2f2f2"/><circle cx="784.39281" cy="429" r="24" fill="#f2f2f2"/><path d="M604.12763,220.37264c-71.89185.50782-130.75611,58.92987-131.77735,130.81635-.00946.66369-.01381,5.33048-.01324,11.43422a33.74778,33.74778,0,0,0,33.74387,33.746h.00007a33.76855,33.76855,0,0,0,33.76114-33.79775c-.00343-4.15211-.00551-7.02584-.00551-7.20227a64.00037,64.00037,0,1,1,98.52027,53.8794l.01171.01422s-48.02832,30.91956-62.67089,73.33545l.01245.003a94.00389,94.00389,0,0,0-3.87354,26.76794c0,3.72538.21916,36.32138.64261,62.77767a34.78649,34.78649,0,0,0,34.79009,34.22233h.00007a34.79588,34.79588,0,0,0,34.79384-35.01061c-.14706-24.22912-.22661-52.44168-.22661-54.48939,0-26.04473,25.12525-51.99475,45.76367-68.91741,23.76587-19.48694,40.86792-46.04291,47.73706-75.99909a86.7618,86.7618,0,0,0,2.49927-18.8335A132.75,132.75,0,0,0,604.12763,220.37264Z" transform="translate(-177.66231 -152.36922)" fill="#00b0ff"/><path d="M1021.147,747.63078H178.853a1.19069,1.19069,0,0,1,0-2.38137h842.294a1.19068,1.19068,0,0,1,0,2.38137Z" transform="translate(-177.66231 -152.36922)" fill="#3f3d56"/><circle cx="628.44885" cy="242.9959" r="30" fill="#2f2e41"/><polygon points="573.012 582.129 560.753 582.129 554.92 534.841 573.015 534.841 573.012 582.129" fill="#a0616a"/><path d="M551.99554,578.62562h23.64387a0,0,0,0,1,0,0v14.88687a0,0,0,0,1,0,0H537.10868a0,0,0,0,1,0,0v0A14.88686,14.88686,0,0,1,551.99554,578.62562Z" fill="#2f2e41"/><polygon points="668.012 582.129 655.753 582.129 649.92 534.841 668.015 534.841 668.012 582.129" fill="#a0616a"/><path d="M646.99554,578.62562h23.64387a0,0,0,0,1,0,0v14.88687a0,0,0,0,1,0,0H632.10868a0,0,0,0,1,0,0v0A14.88686,14.88686,0,0,1,646.99554,578.62562Z" fill="#2f2e41"/><circle cx="623.88979" cy="248.61007" r="24.56103" fill="#a0616a"/><path d="M816.19123,504.7751l10.98975-25.25a31.38253,31.38253,0,0,0-6.94971-35.6,31.87322,31.87322,0,0,0-3.07031-2.67,30.93522,30.93522,0,0,0-18.98975-6.57,32.179,32.179,0,0,0-13.3999,2.98c-.36035.16-.71.33-1.07031.5-.68994.33-1.36963.69-2.02979,1.06a31.67823,31.67823,0,0,0-15.70019,23.88l-4.8501,40.64c-1.21973,3.19-44.73975,118.39-29.51953,206.34a4.46692,4.46692,0,0,0,3.81982,3.67l15.43018,2.1a4.49661,4.49661,0,0,0,5.00976-3.53l25.89014-123.41a3.50323,3.50323,0,0,1,6.79981-.23l36.58007,129.78a4.47129,4.47129,0,0,0,4.31006,3.28,5.12184,5.12184,0,0,0,.87012-.08l18.84961-3.63a4.471,4.471,0,0,0,3.63037-4.81C850.02131,682.3351,835.3011,527.60512,816.19123,504.7751Z" transform="translate(-177.66231 -152.36922)" fill="#2f2e41"/><path d="M706.10166,421.41909A10.05576,10.05576,0,0,0,716.696,432.6225l13.72894,32.99236,10.385-15.3943-14.62937-28.97a10.11027,10.11027,0,0,0-20.07892.16852Z" transform="translate(-177.66231 -152.36922)" fill="#a0616a"/><path d="M800.19025,537.99553a10.05577,10.05577,0,0,0,8.42651-12.91316l28.88533-21.03846-17.39036-6.51224-24.76387,20.97687a10.11028,10.11028,0,0,0,4.84239,19.487Z" transform="translate(-177.66231 -152.36922)" fill="#a0616a"/><path d="M753.10188,487.61024a17.05692,17.05692,0,0,1-3.29834-.32519,16.30539,16.30539,0,0,1-11.94751-9.61621l-19.23438-23.45313a4.50075,4.50075,0,0,1,1.11109-6.68066l13.68432-8.4707a4.50007,4.50007,0,0,1,6.21533,1.49023l13.5564,22.334L779.15022,443.702A9.72146,9.72146,0,0,1,790.46,459.26356l-25.91186,23.63672A16.25271,16.25271,0,0,1,753.10188,487.61024Z" transform="translate(-177.66231 -152.36922)" fill="#2f2e41"/><path d="M823.252,522.8827c-.03515,0-.07055,0-.10571-.001a4.50783,4.50783,0,0,1-3.31079-1.57031l-12.16626-14.19336a4.49979,4.49979,0,0,1,.92041-6.67286l22.78149-15.1875-20.63842-24.8125a9.721,9.721,0,0,1,14.8872-12.18261l25.0835,24.51269a16.52481,16.52481,0,0,1-3.67529,26.94043l-20.50122,21.75391A4.50742,4.50742,0,0,1,823.252,522.8827Z" transform="translate(-177.66231 -152.36922)" fill="#2f2e41"/><path d="M795.30707,470.58358a4.63212,4.63212,0,0,1-.584-.03711,4.46111,4.46111,0,0,1-3.71045-3.06885l-9.14234-28.02929a3.08255,3.08255,0,0,1,1.594-3.72461l.29663-.14014c.269-.12793.5354-.25439.80737-.37549a32.57412,32.57412,0,0,1,13.603-3.023,31.327,31.327,0,0,1,17.16138,5.15674,3.13007,3.13007,0,0,1,.90136,4.29443L799.08393,468.504A4.45513,4.45513,0,0,1,795.30707,470.58358Z" transform="translate(-177.66231 -152.36922)" fill="#e6e6e6"/><circle cx="652.1011" cy="219.78616" r="9.81668" fill="#2f2e41"/><path d="M796.11115,361.36513h0a26,26,0,0,0-26,25.99994v11.00006h13.5293l6.4707-11,1.94141,11h41.05859l-11-11.00006A26,26,0,0,0,796.11115,361.36513Z" transform="translate(-177.66231 -152.36922)" fill="#2f2e41"/><path d="M834.80883,365.43121a15.15,15.15,0,0,1,16.48081-10.39558c6.256,1.04586,11.20228,6.07455,14.14944,11.69107s4.30806,11.90252,6.28935,17.92793,4.79124,12.08362,9.79306,15.984,12.67721,4.9584,17.58966.94607a20.11809,20.11809,0,0,1-37.47706,7.18124c-2.59206-4.61172-3.26121-10.01684-4.02988-15.251s-1.7674-10.6498-4.86211-14.94043-8.88772-7.09293-13.80374-5.13859Z" transform="translate(-177.66231 -152.36922)" fill="#2f2e41"/><path d="M515.60883,380.40755h0a33.748,33.748,0,0,1-33.74414-33.746c-.00049-6.10376.0039-10.77051.01318-11.4342a131.50724,131.50724,0,0,1,15.35889-59.90875,131.80321,131.80321,0,0,0-25.35889,75.90875c-.00928.66369-.01367,5.33044-.01318,11.4342a33.748,33.748,0,0,0,33.74414,33.746h0A33.77281,33.77281,0,0,0,538.09662,371.817,33.62247,33.62247,0,0,1,515.60883,380.40755Z" transform="translate(-177.66231 -152.36922)" fill="#3f3d56"/><path d="M606.415,291.47848a64.00385,64.00385,0,0,1,55.65918,89.413,63.9972,63.9972,0,1,0-107.42578-66.98523A63.87073,63.87073,0,0,1,606.415,291.47848Z" transform="translate(-177.66231 -152.36922)" fill="#3f3d56"/><path d="M616.79682,590.40755h0a34.78682,34.78682,0,0,1-34.79-34.22235c-.42334-26.45629-.64258-59.0523-.64258-62.77765a94.00389,94.00389,0,0,1,3.87354-26.76794l-.01221-.003a95.069,95.069,0,0,1,5.49414-12.70087,110.04745,110.04745,0,0,0-15.49414,28.70087l.01221.003a94.00389,94.00389,0,0,0-3.87354,26.76794c0,3.72535.21924,36.32136.64258,62.77765a34.78682,34.78682,0,0,0,34.79,34.22235h0a34.80287,34.80287,0,0,0,33.40185-25.04846A34.66005,34.66005,0,0,1,616.79682,590.40755Z" transform="translate(-177.66231 -152.36922)" fill="#3f3d56"/><polygon points="126.541 582.585 138.8 582.584 144.633 535.296 126.538 535.297 126.541 582.585" fill="#ffb8b8"/><path d="M301.576,731.45065H340.1067a0,0,0,0,1,0,0v14.88687a0,0,0,0,1,0,0H316.46283A14.88686,14.88686,0,0,1,301.576,731.45066v0A0,0,0,0,1,301.576,731.45065Z" transform="translate(464.05409 1325.40429) rotate(179.99738)" fill="#2f2e41"/><polygon points="82.541 582.585 94.8 582.584 100.633 535.296 82.538 535.297 82.541 582.585" fill="#ffb8b8"/><path d="M257.576,731.45065H296.1067a0,0,0,0,1,0,0v14.88687a0,0,0,0,1,0,0H272.46283A14.88686,14.88686,0,0,1,257.576,731.45066v0A0,0,0,0,1,257.576,731.45065Z" transform="translate(376.05409 1325.4063) rotate(179.99738)" fill="#2f2e41"/><path d="M270.91659,720.41068l-11.975-.62988a4.6735,4.6735,0,0,1-4.41851-4.967l14.31268-158.46594,65.911,17.78562,6.35023-1.73241L321.23868,712.68583a4.69622,4.69622,0,0,1-4.35816,3.94458l-12.9089.60147a4.67413,4.67413,0,0,1-4.93149-4.79557l2.339-84.19641a1.55813,1.55813,0,0,0-3.0832-.36007L275.739,716.69228a4.64568,4.64568,0,0,1-4.56913,3.7255C271.086,720.41778,271.00154,720.41575,270.91659,720.41068Z" transform="translate(-177.66231 -152.36922)" fill="#2f2e41"/><circle cx="128.74202" cy="249.75879" r="24.56103" fill="#ffb8b8"/><path d="M265.51193,474.28693l2.70056,58.26748.97625,21.19852a4.64221,4.64221,0,0,0,3.07432,4.17534l63.336,22.94342a4.47742,4.47742,0,0,0,1.59954.28045,4.64358,4.64358,0,0,0,4.66371-4.7881L339.2657,471.5969A36.93044,36.93044,0,0,0,308.522,435.91974c-.61263-.09345-1.23592-.18695-1.8592-.27006a36.24947,36.24947,0,0,0-29.165,9.44122,37.23612,37.23612,0,0,0-11.9859,29.196Z" transform="translate(-177.66231 -152.36922)" fill="#ccc"/><path d="M365.85452,569.24512a10.06355,10.06355,0,0,1-5.36877-15.22659l-21.478-28.56,18.53424-1.14707,17.55439,27.29693a10.111,10.111,0,0,1-9.24184,17.63673Z" transform="translate(-177.66231 -152.36922)" fill="#ffb8b8"/><path d="M350.75332,548.85022a4.64437,4.64437,0,0,1-2.54106-2.51848L315.854,469.2374a12.4634,12.4634,0,1,1,22.98438-9.64693l32.3582,77.09534a4.679,4.679,0,0,1-2.50048,6.11822l-14.36542,6.029a4.64165,4.64165,0,0,1-3.57741.01724Z" transform="translate(-177.66231 -152.36922)" fill="#ccc"/><path d="M298.50776,546.13086,329.587,486.62205a4.87826,4.87826,0,0,1,6.57494-2.06344l45.11152,23.5601a4.87826,4.87826,0,0,1,2.06343,6.57494l-31.07927,59.50881a4.87827,4.87827,0,0,1-6.57494,2.06344L300.5712,552.7058A4.87826,4.87826,0,0,1,298.50776,546.13086Z" transform="translate(-177.66231 -152.36922)" fill="#3f3d56"/><path d="M319.35062,518.94278a10.06358,10.06358,0,0,0-15.517-4.46026l-29.77845-19.75406-.05061,18.56963L302.2904,529.21a10.111,10.111,0,0,0,17.06022-10.26718Z" transform="translate(-177.66231 -152.36922)" fill="#ffb8b8"/><path d="M281.7006,523.11883l-24.33677-19.27776a17.16326,17.16326,0,0,1-7.82343-27.13518l22.09715-28.95951a10.096,10.096,0,0,1,17.1296,10.28435l-17.48384,28.6,25.694,12.18686a4.67363,4.67363,0,0,1,1.94814,6.71958l-10.37175,16.41406a4.682,4.682,0,0,1-3.16671,2.1111c-.02565.00448-.05149.00846-.0773.0123A4.69555,4.69555,0,0,1,281.7006,523.11883Z" transform="translate(-177.66231 -152.36922)" fill="#ccc"/><path d="M287.84537,418.57447a2.13479,2.13479,0,0,1,1.85636-2.81905,4.93046,4.93046,0,0,1,3.4761,1.71495,13.8334,13.8334,0,0,0,3.07115,2.63711c1.18812.59889,2.79953.51354,3.47685-.62824.63605-1.07221.20023-2.508-.18482-3.75347a36.90711,36.90711,0,0,1-1.62991-9.77c-.11092-3.70032.41115-7.562,2.45972-10.44807,2.64387-3.72475,7.37142-5.13883,11.84544-5.0363s8.87547,1.48362,13.30713,2.35665c1.52992.30139,3.32826.4555,4.35153-.73025,1.08805-1.26082.68844-3.3014.22563-5.00376-1.20094-4.41743-2.475-8.98461-5.26525-12.55224a18.89839,18.89839,0,0,0-12.06081-6.79014,28.93848,28.93848,0,0,0-13.46236,1.52838,36.09628,36.09628,0,0,0-17.68285,12.3186,29.23592,29.23592,0,0,0-5.57809,21.60019,26.66712,26.66712,0,0,0,9.88579,16.85462Z" transform="translate(-177.66231 -152.36922)" fill="#2f2e41"/><path d="M598.92043,735.14922a45.99375,45.99375,0,0,1-17.07033-71.4888,45.99715,45.99715,0,1,0,62.56892,66.464A45.96919,45.96919,0,0,1,598.92043,735.14922Z" transform="translate(-177.66231 -152.36922)" fill="#3f3d56"/></svg>
+
+      </div>
+      </div>
+      </a>
+      <div class="articleContent">
+          <div class="articleTitle">
+              <h3  style="margin-top: 1rem; color:#262335; font-size: x-large;">ওপৰত ক্লিক কৰক</h3>
+          </div>
+          <div class="articleInfo">
+              <div class="info">
+                <div class="aricleAuthor"><h6>কুইজত অংশগ্ৰহণৰ বাবে</h6></div>
+                 <div class="articleDate"><h6></h6></div>
+              </div>
+              <div class="articleLikes"><h6></h6></div>
+          </div>
+      </div>
+      </div>
+    </section>
+
+
+        <!--Custom Card-->
+        <section style="font-family: 'Alata', sans-serif;
+        font-family: 'Galada', cursive;">
+        <style>
+          .library .card{
+            margin-bottom: 5rem;
+            margin-left: 5px;
+    margin-right: 5px;
+          }
+        </style>
+
+  <div  style=" margin-top: 20px ;  background: #ffff; margin-bottom: 1rem; height: 100%;" class="library">
+        <div class="card">
+           <div class="cardTitle">
+            <span class="slash"></span>
+
+            <a href="/poems/"><h2>কুঁহিপাতৰ পংক্তি</h2></a>
+            <span class="slash"></span>
+           </div>
+           {% for post  in poems|slice:":3"  %}
+
+
+           <div class="cardContainer">
+            <div class="cardDiv">
+                <a href="/blog/{{post.slug}}">
+                    <span>
+                        <img src="/media/{{post.ImageTop_optional}}" alt="imgLogo">
+                     </span>
+                 </a>
+                 <div class="cardContent">
+                     <a href="/blog/{{post.slug}}"><h3 style="font-size:large;" class="title">{{post.title|truncatechars:100}}</h3></a>
+                     <p style="font-size: x-small;" class="timeStamp">{{post.time}}</p>
+                     <div class="timeStamp">
+                      <i style="size: 9rem; cursor:pointer;" class="tiny material-icons">favorite_border</i><span class="new badge">{{post.likepost_set.all|length}}</span></div>
+                 </div>
+             </div>
+
+             </div>
+             {% endfor %}
+        </div>
+        <div class="card">
+            <div class="cardTitle">
+                <span class="slash"></span>
+                <a href= "/upanyax/"><h2> উপন‍্যাস</h2></a>
+                <span class="slash"></span>
+           </div>
+
+           {% for post  in upanyax|slice:":3"  %}
+
+
+           <div class="cardContainer">
+            <div class="cardDiv">
+                <a href="/blog/{{post.slug}}">
+                    <span>
+                        <img src="/media/{{post.ImageTop_optional}}" alt="imgLogo">
+                     </span>
+                 </a>
+                 <div class="cardContent">
+                     <a href="/blog/{{post.slug}}"><h3 style="font-size:large;" class="title">{{post.title|truncatechars:100}}</h3></a>
+                     <p style="font-size: x-small;" class="timeStamp">{{post.time}}</p>
+                     <div class="timeStamp">
+                      <i style="size: 9rem; cursor:pointer;" class="tiny material-icons">favorite_border</i><span class="new badge">{{post.likepost_set.all|length}}</span></div>
+                 </div>
+             </div>
+
+             </div>
+             {% endfor %}
+        </div>
+        <div class="card">
+          <div class="cardTitle">
+           <span class="slash"></span>
+           <a href="/comedy/"><h2>নকৈ নোৱাৰি</h2></a>
+           <span class="slash"></span>
+          </div>
+          {% for post  in science|slice:":3"  %}
+
+
+           <div class="cardContainer">
+            <div class="cardDiv">
+                <a href="/blog/{{post.slug}}">
+                    <span>
+                        <img src="/media/{{post.ImageTop_optional}}" alt="imgLogo">
+                     </span>
+                 </a>
+                 <div class="cardContent">
+                     <a href="/blog/{{post.slug}}"><h3 style="font-size:large;" class="title">{{post.title|truncatechars:100}}</h3></a>
+                     <p style="font-size: x-small;" class="timeStamp">{{post.time}}</p>
+                     <div class="timeStamp">
+                      <i style="size: 9rem; cursor:pointer;" class="tiny material-icons">favorite_border</i><span class="new badge">{{post.likepost_set.all|length}}</span></div>
+                 </div>
+             </div>
+
+             </div>
+             {% endfor %}
+       </div>
+  </div>
+  </div>
+  </section>
+  <section style="font-family: 'Alata', sans-serif;
+  font-family: 'Galada', cursive;">
+  <style>
+    .library .card{
+      margin-bottom: 5rem;
+    }
+  </style>
+
+<div  style=" margin-top: 20px ; background: #ffff; margin-bottom: 1rem; height: 100%;" class="library">
+  <div class="card">
+     <div class="cardTitle">
+      <span class="slash"></span>
+
+      <a href="/comics/"><h2>কমিক্চ্</h2></a>
+      <span class="slash"></span>
+     </div>
+     {% for post  in comics|slice:":3"  %}
+
+
+     <div class="cardContainer">
+      <div class="cardDiv">
+          <a href="/comic/{{post.slug}}">
+              <span>
+                  <img src="/media/{{post.thumbnail}}" alt="imgLogo">
+               </span>
+           </a>
+           <div class="cardContent">
+               <a href="/comic/{{post.slug}}"><h3 style="font-size:large;" class="title">{{post.title|truncatechars:100}}</h3></a>
+               <p style="font-size: x-small;" class="timeStamp">{{post.time}}</p>
+               <div class="timeStamp">
+                <i style="size: 9rem; cursor:pointer;" class="tiny material-icons">favorite_border</i><span class="new badge">{{post.likecomic_set.all|length}}</span></div>
+           </div>
+       </div>
+
+       </div>
+       {% endfor %}
+  </div>
+  <div class="card">
+      <div class="cardTitle">
+          <span class="slash"></span>
+          <a href="/microstories/"><h2>অণুগল্প সমাহাৰ</h2></a>
+          <span class="slash"></span>
+     </div>
+
+     {% for post  in sports|slice:":3"  %}
+
+
+     <div class="cardContainer">
+      <div class="cardDiv">
+          <a href="/blog/{{post.slug}}">
+              <span>
+                  <img src="/media/{{post.ImageTop_optional}}" alt="imgLogo">
+               </span>
+           </a>
+           <div class="cardContent">
+               <a href="/blog/{{post.slug}}"><h3 style="font-size:large;" class="title">{{post.title|truncatechars:100}}</h3></a>
+               <p style="font-size: x-small;" class="timeStamp">{{post.time}}</p>
+               <div class="timeStamp">
+                <i style="size: 9rem; cursor:pointer;" class="tiny material-icons">favorite_border</i><span class="new badge">{{post.likepost_set.all|length}}</span></div>
+           </div>
+       </div>
+
+       </div>
+       {% endfor %}
+  </div>
+  <div class="card">
+    <div class="cardTitle">
+     <span class="slash"></span>
+     <a href="/stories/"><h2>কথাশিল্প</h2></a>
+     <span class="slash"></span>
+    </div>
+    {% for post  in stories|slice:":3"  %}
+
+
+     <div class="cardContainer">
+      <div class="cardDiv">
+          <a href="/blog/{{post.slug}}">
+              <span>
+                  <img src="/media/{{post.ImageTop_optional}}" alt="imgLogo">
+               </span>
+           </a>
+           <div class="cardContent">
+               <a href="/blog/{{post.slug}}"><h3 style="font-size:large;" class="title">{{post.title|truncatechars:100}}</h3></a>
+               <p style="font-size: x-small;" class="timeStamp">{{post.time}}</p>
+               <div class="timeStamp">
+                <i style="size: 9rem; cursor:pointer;" class="tiny material-icons">favorite_border</i><span class="new badge">{{post.likepost_set.all|length}}</span></div>
+           </div>
+       </div>
+
+       </div>
+       {% endfor %}
+ </div>
+</div>
+</div>
+</section>
+<!--customcard-->
+
+
+<!--gallery image start-->
+<style type="text/css">
+
+
+    	#container{
+    		min-height:100vh;
+    		width:100vw;
+    		margin:20px auto 0;
+    		display:flex;
+    		flex-direction:row;
+    		flex-wrap:wrap;
+    		align-items:center;
+    		justify-content:space-around;
+    	}
+        #container .box{
+        	position:relative;
+        	max-height:400px;
+          max-width:605px;
+          margin:20px 20px;
+          background:#262626;
+          box-sizing: border-box;
+          display:inline-block;
+          border-radius:25px;
+        }
+        #container .box .imagebox{
+        	position:relative;
+        	overflow:hidden;
+        	webkit-box-shadow: -1px 2px 26px 10px rgba(162,202,255,1);
+-moz-box-shadow: -1px 2px 26px 10px rgba(162,202,255,1);
+box-shadow: -1px 2px 26px 10px rgba(162,202,255,1);
+
+        }
+        #container .box .imagebox img{
+            max-width:100%;
+            max-height:100%;
+            background-image-size:cover;
+            box-shadow:3px 2px 2px lightgrey;
+            transition:transform 2s;
+
+
+        }
+        #container .box:hover .imagebox img{
+        	transform:scale(1.5);
+        	opacity:0.8;
+
+        }
+        #container .box .details{
+          text-align:center;
+          color:white;
+          position:absolute;
+          top:5px;
+          left:5px;
+          bottom:5px;
+          right:5px;
+          background:rgba(0,0,0,0.8);
+          transform:scaleY(0);
+          transition:transform 0.8s;
+        }
+        #container .box .details .content{
+         position:absolute;
+         top:50%;
+         transform:translateY(-50%);
+         text-align:center;
+         padding:15px;
+         color:#fff;
+        }
+         #container .box:hover .details{
+         	transform:scaleY(1);
+         	opacity:0.8;
+         }
+         #container .box:hover .details .content{
+         	opacity:1;
+         }
+        #container .box .details .content h2{
+          margin:0;
+          padding:0;
+          font-size: 1em;
+          color:#ff0;
+        }
+        #container .box .details .content p{
+          margin:10px 0 0;
+          padding:0;
+          font-size:.7em;
+        }
+    </style>
+
+
+  <center><h6>আলোকচিত্ৰ</h6></center>
+  <div id="container">
+      {% for post  in galleryShuffle|slice:":4"  %}
+  	<div class="box">
+  		<div style="-webkit-box-shadow: -1px 2px 26px 10px rgba(162,202,255,1);
+          -moz-box-shadow: -1px 2px 26px 10px rgba(162,202,255,1);
+          box-shadow: -1px 2px 26px 10px rgba(162,202,255,1);" class="imagebox">
+            <img  src="/media/{{post.ImageTop_optional}}">
+        </div>
+        <div class="details">
+        	<div class="content">
+        	    <a href="/profile/{{post.PC.name}}"><h2>PC: {{post.PC}}</h2></a>
+
+        		<p>{{post.Short_Description}}
+        		</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+  </div>
+  <center><a href="/gallery/"><button class="btn btn-secondary" >More</button></a></center>
+<!--gallery image end-->
+
+
+
+
+<!--apply Admin-->
+
+<section  style="padding-top: 1.3rem; top: 0vh; margin-top: 30px; background: #bdfffe;" class="articleSection">
+  <div class="article">
+  <div style="background: #bdfffe;" class="title">
+      <div style="background: #bdfffe;" class="titleOverlap">
+          <h1 style="margin-top: 0rem; color: black; font-size: xx-large;background: #bdfffe">আবেদন</h1>
+      </div>
+      <div style="margin-top: -2.5rem;
+      margin-left: 5rem; text-align: end; width: 85%; " class="underline">
+
+        <span style="background: #bdfffe;">
+          <img style="background: #bdfffe; width: 2.8rem;" src="{% static 'feather.png' %}" alt="">
+         </span>
+         </div>
+
+
+  </div>
+  <a href="accounts/login">
+  <div class="articleImg">
+    <div class="anime">
+      <svg style="position: absolute;
+		  top: 50%;
+		  margin-top: -96px;
+		  margin-left: -96px;
+		  left: 50%;" id="hands-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="196px" height="196px" viewBox="0 0 196 196" enable-background="new 0 0 196 196" xml:space="preserve">
+        <g id="keyboard_full">
+          <g id="keyboard">
+
+              <rect id="body" x="21" y="77" fill="#FFFFFF" stroke="#010202" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10" width="153" height="57"/>
+            <g id="keys">
+              <rect x="27.5" y="83.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="39.5" y="83.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="51.5" y="83.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="63.5" y="83.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="75.5" y="83.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="87.5" y="83.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="99.5" y="83.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="111.5" y="83.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="123.5" y="83.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="135.5" y="83.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="147.5" y="83.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="159.5" y="83.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="27.5" y="95.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="39.5" y="95.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="51.5" y="95.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="63.5" y="95.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="75.5" y="95.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="87.5" y="95.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="99.5" y="95.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="111.5" y="95.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="123.5" y="95.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="135.5" y="95.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="147.5" y="95.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="159.5" y="95.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="27.5" y="107.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="39.5" y="107.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="51.5" y="107.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="63.5" y="107.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="75.5" y="107.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="87.5" y="107.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="99.5" y="107.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="111.5" y="107.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="123.5" y="107.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="135.5" y="107.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="147.5" y="107.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="159.5" y="107.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="27.5" y="119.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="39.5" y="119.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="51.5" y="119.5" fill="#96BF1F" width="92" height="8"/>
+              <rect x="147.5" y="119.5" fill="#96BF1F" width="8" height="8"/>
+              <rect x="159.5" y="119.5" fill="#96BF1F" width="8" height="8"/>
+            </g>
+          </g>
+          <path id="cable" fill="none" stroke="#010202" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10" d="M73.5,28
+            L73.5,28c0,6.627,5.373,12,12,12h24h24c6.627,0,12,5.373,12,12l0,0c0,6.627-5.373,12-12,12h-24c-6.627,0-12,5.373-12,12l0,0"/>
+        </g>
+        <g id="hands">
+          <g id="left_hand">
+            <path fill="#FFFFFF" stroke="#3D3D3D" stroke-width="3" stroke-miterlimit="1" d="M66.64,168.001v-4l12.364-28.163
+              c0.995-2.087,1.27-3.829-0.319-5.413s-4.185-2.049-5.867,0.729l-5.317,8.847v-4H43.138V123.69c0-2.076-1.821-3.759-4.067-3.759
+              c-2.247,0-4.067,1.683-4.067,3.759v20.341l0.001,0.001V152l6.327,16"/>
+            <path fill="#FFFFFF" stroke="#3D3D3D" stroke-width="3" stroke-miterlimit="1" d="M59.408,119.206v18.833"/>
+            <path id="left_index_finger" fill="#FFFFFF" stroke="#3D3D3D" stroke-width="3" stroke-miterlimit="1" d="M67.5,144.031
+              l0.043-24.795c0-2.074-1.82-3.602-4.066-3.602c-2.247,0-4.068,1.529-4.068,3.602v18.834"/>
+            <path id="left_middle_finger" fill="#FFFFFF" stroke="#3D3D3D" stroke-width="3" stroke-miterlimit="1" d="M59.374,138.074
+              v-22.436c0-2.074-1.82-3.604-4.066-3.604l0,0c-2.247,0-4.068,1.529-4.068,3.604v22.435"/>
+            <path id="left_ring_finger" fill="#FFFFFF" stroke="#3D3D3D" stroke-width="3" stroke-miterlimit="1" d="M51.239,138.071v-18.833
+              c0-2.074-1.821-3.604-4.067-3.604l0,0c-2.247,0-4.067,1.53-4.067,3.604v18.833"/>
+          </g>
+          <g id="right_hand">
+            <path fill="#FFFFFF" stroke="#3D3D3D" stroke-width="3" stroke-miterlimit="1" d="M128.177,168.001v-4l-12.364-28.163
+              c-0.995-2.087-1.27-3.829,0.319-5.413s4.185-2.049,5.867,0.729l5.317,8.847v-4h24.362V123.69c0-2.076,1.821-3.759,4.067-3.759
+              c2.247,0,4.067,1.683,4.067,3.759v20.341l-0.001,0.001V152l-6.327,16"/>
+            <path fill="#FFFFFF" stroke="#3D3D3D" stroke-width="3" stroke-miterlimit="1" d="M135.408,138.039v-18.833"/>
+            <path id="right_index_finger" fill="#FFFFFF" stroke="#3D3D3D" stroke-width="3" stroke-miterlimit="1" d="M135.408,138.07
+              v-18.834c0-2.072-1.821-3.602-4.068-3.602c-2.246,0-4.066,1.527-4.066,3.602l0.043,24.795"/>
+            <path id="right_middle_finger" fill="#FFFFFF" stroke="#3D3D3D" stroke-width="3" stroke-miterlimit="1" d="M143.577,138.073
+              v-22.435c0-2.074-1.821-3.604-4.068-3.604l0,0c-2.246,0-4.066,1.529-4.066,3.604v22.436"/>
+            <path id="right_ring_finger" fill="#FFFFFF" stroke="#3D3D3D" stroke-width="3" stroke-miterlimit="1" d="M151.712,138.071
+              v-18.833c0-2.073-1.82-3.604-4.067-3.604l0,0c-2.246,0-4.067,1.529-4.067,3.604v18.833"/>
+          </g>
+        </g>
+        </svg>
+
+  </div>
+  </div>
+  </a>
+  <div class="articleContent">
+      <div class="articleTitle">
+          <h3  style="margin-top: 1rem; color:#262335; font-size: x-large;">ওপৰত ক্লিক কৰক</h3>
+      </div>
+      <div class="articleInfo">
+          <div class="info">
+            <div class="aricleAuthor"><h6>এডমিন পদৰ বাবে আবেদন</h6></div>
+             <div class="articleDate"><h6></h6></div>
+          </div>
+          <div class="articleLikes"><h6></h6></div>
+      </div>
+  </div>
+  </div>
+</section>
+
+
+
+    <!--comment-->
+    <style>
+
+   </style>
+    <div class="site-section">
+
+    <div id ="comments" class="pt-5">
+      <div style="margin-left: 1rem;" class="section-title">
+        <h2 class="mb-5"> মন্তব্য :</h2>
+      </div>
+
+
+
+      <div class="comment-list2">
+      {% for com in comments %}
+      <ul class="comment-list" style="display: none; margin-left: 1rem; margin-right: 1rem;">
+        <li style="border-bottom: 3px outset rgba(0,0,0,0.41);
+        border-radius: 30px;" class="comment">
+          <div class="vcard bio">
+            {% if com.image  %}
+            <img src="/media/{{com.image}}" alt="">
+
+              {% else %}
+
+            <img src="https://img.icons8.com/cotton/64/000000/user-settings.png" alt=""/>
+            {% endif %}
+          </div>
+          <div class="comment-body">
+            <h3>{{com.name}}</h3>
+            <div class="meta">{{com.time}}</div>
+            <p>{{com.comment}}</p>
+            <style>
+              .like__btn {
+	 border: none;
+	 background-color: #e74c3c;
+	 color: white;
+	 cursor: pointer;
+	 padding: 0.8rem;
+	 border-radius: 0.4rem;
+	 max-width: 200px;
+	 transition: all ease 0.3s;
+	 display: flex;
+   align-items: center;
+   width: 50px;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+ .like__btn:hover {
+	 background-color: rgba(231, 76, 60, 0.8);
+}
+ .like__btn:disabled {
+	 background-color: #d4cfcf;
+	 cursor: pointer;
+}
+ .like__icon {
+	 font-size: .8rem;
+	 margin-right: 0.3rem;
+}
+ .like__number {
+	 font-size: 0.8rem;
+}
+
+
+            </style>
+            <form method="POST"  action="{% url 'like_home' com.pk %}">{% csrf_token %}
+            <button type="submit" name="com_id" value="{{com.id}}" class="like__btn animated">
+              <i class="like__icon fa fa-heart"></i>
+              <span class="like__number">{{com.like_set.all|length}}</span>
+            </button>
+          </form>
+          </div>
+        </li>
+      </ul>
+      {% endfor %}
+    </div>
+
+        <style>
+          .load-more{
+  background-color:#000;
+  color:#fff !important;
+  padding:5px 10px;
+  border-radius:4px;
+  font-size:20px;
+  margin:50px 0;
+  display:inline-block;
+}
+
+.load-more:hover{
+  background-color:blue;
+  text-decoration:none;
+}
+        </style>
+
+
+       <center><a href="#" class="load-more">Load More</a></center>
+
+
+      <div style="margin-bottom: -90px;" class="comment-form-wrap pt-5">
+        <div style="margin-left:1rem" class="section-title">
+          <h2 class="mb-5">মন্তব্য লিখক :</h2>
+        </div>
+        <form style="background: rgb(176,242,254);
+        background: linear-gradient(0deg, rgba(176,242,254,1) 42%, rgba(255,255,255,1) 89%);" action="" method="POST" enctype="multipart/form-data" class="p-5 ">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="name">
+              নাম *</label>
+            <input type="text" name="name" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label for="email">ই-মেইল *</label>
+            <input type="email" name="email" class="form-control" id="email">
+            <input type="hidden" id="date" name="date">
+
+
+          </div>
+
+
+          <div class="form-group">
+            <label for="message">বাৰ্তা</label>
+            <textarea name="message1" id="message1"  cols="30" rows="10" class="form-control"></textarea>
+          </div>
+          <div class="form-group">
+            <style>
+              .btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    cursor: inherit;
+    display: block;
+}
+            </style>
+            <span class="btn btn-primary btn-file">
+              DP আপল'ড কৰক <input name="dphome" type="file">
+          </span>
+          </div>
+          <center><div style="margin-top: 1rem;" class="form-group">
+            <input type="submit" value="পোষ্ট কৰক" class="btn btn-primary py-3">
+          </div></center>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+    <!--comment-->
+
+
+
+
+
+
+
+<style>
+
+
+    /*custom-footer*/
+
+
+
+
+#footer2{
+    width:100vw;
+    height:41vh;
+    z-index:10;
+    position:relative;
+    bottom:0;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow:hidden;
+    background-image:radial-gradient(rgb(212, 239, 248),rgb(216, 245, 245));
+}
+ #footer2 .consolationNote{
+    z-index:10;
+    color:rgb(0, 62, 87);
+    position: relative;
+    top:0%;
+    text-align: center;
+    font-size:1.1rem;
+    transform:translateY(0vh);
+    line-height:2rem;
+    padding:1rem;
+    font-weight:bold;
+    text-align: left;
+ }
+ #footer2:after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0vh;
+    left:0;
+    background-color:black;
+    opacity:0.1;
+    transform:scale(0);
+    color:white;
+    pointer-events:none;
+    z-index:-1;
+}
+#footer2 .change{
+    text-align:right;
+    font-size:0.8rem;
+    color:rgb(54, 54, 5);
+}
+#footer2:hover:after{
+    transition:1s;
+    transform:scale(1);
+}
+#footer2:hover:after{
+    transition:1s;
+    transform:scale(1);
+}
+@media (max-width: 500px){
+    #footer2{
+        height:40vh;
+    }
+    #footer2 .consolationNote{
+        font-size:0.7rem;
+        transform:translateY(0vh);
+        line-height:1.5rem;
+        padding:0.5rem;
+        text-align: left;
+     }
+     #footer2 .change{
+        font-size:0.5rem;
+     }
+}
+
+</style>
+    <div style=" background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(176,242,254,1) 97%); margin-top: -1rem; padding-top:2.5rem;padding-bottom:0rem; margin-bottom:-5rem" class="site-section subscribe">
+      <div class="container">
+        <center><div style="margin-bottom: 4rem; width: 50%; background: transparent; " class="underline">
+
+          <span style="background: transparent; top:0px ;">
+            <img  src="{% static 'feather.png' %}" alt="">
+           </span>
+           </div></center>
+        <form action="/newsletter/" method="post" class="row align-items-center">{% csrf_token %}
+          <div class="col-md-5 mr-auto">
+            <h2>নিউজ লেটাৰত গ্ৰাহকীভুক্ত হওঁক</h2>
+            {% load socialaccount %}
+             {% providers_media_js %}
+
+            <p>Subscribe To Our Newsletter And Get Notified When There Is A New Post Uploaded To Our Website</p>
+          </div>
+          <div class="col-md-6 ml-auto">
+            <div class="d-flex">
+              <input type="email" id="nlemail" name ="nlemail" class="form-control" placeholder="Enter your email">
+              <button type="submit" class="btn btn-secondary" ><span class="icon-paper-plane"></span></button>
+            </div>
+          </div>
+        </form>
+        <center><a  href="{% provider_login_url 'google' %}"><button style="margin-top: 32px;"  class="btn btn-secondary" >Admin</button></a></center>
+
+
+      </div>
+       <!--custom -footer-->
+    <section id="footer2">
+        <div class="consolationNote" style="color:#638dd1;">
+            <h2>"Samar Hazarika...</h2>
+        </div>
+        <div class="consolationNote">
+            <p>‌যোৰহাট চিকিৎসা মহাবিদ্যালয়ৰ ছাত্ৰ ছাত্ৰী সকলে এখনি আলোচনী প্ৰকাশ কৰিবলৈ প্ৰস্তুতি কৰিছে ।
+                "কাঁচিয়লি" এটি সুন্দৰ নামেৰে নামাকৰণ কৰাত আনন্দিত হৈছো । এই আলোচনীখনৰ সম্পাদনা বিভাগ আৰু বিষয়ববীয়া সকলোলৈকে মোৰ হিয়াভৰা শুভেচ্ছা জনালো , চিকিৎসাৰ লগে লগে অসমীয়া সাহিত্য সংস্কৃতিক আগবঢ়ায় নিব বুলি মই আশা কৰিলো । শেষত মোৰ আন্তৰিক শুভকামনা ও ধন্যবাদেৰে -" </div>
+        <div class="consolationNote change" style="text-align:right;">
+
+        </div>
+    </section>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="footer">
+      <div class="container">
+
+
+
+      </div>
+    </div>
+
+
+  </div>
+  <!-- .site-wrap -->
+
+
+  <!-- loader -->
+  <div id="loader" class="show fullscreen">
+    <center><div class="stage" style="width: 120px; height: 120px;">
+    <div class="cubespinner">
+        <div class="face1">কাঁচিয়লি</div>
+        <div class="face2">সংগীত</div>
+        <div class="face3">উপন‍্যাস</div>
+        <div class="face4">বিজ্ঞান</div>
+        <div class="face5">প্ৰশ্নবাণ</div>
+        <div class="face6">ব‍্যংগ</div>
+        <div class="face7">সংগীত</div>
+    </div>
+  </center>
+</div></div>
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
+
+
+
+
+  <script src="{% static 'js/main.js' %}"></script>
+  <script type="text/javascript">
+    document.getElementById('date').value = Date();
+  </script>
+<script>
+  let contents = document.getElementsByClassName('preview');
+  Array.from(contents).forEach((element)=>{
+    element.innerHTML = element.innerText
+
+  })
+</script>
+<script>
+  $(document).ready(function(){
+  $(".comment-list").slice(0,3).show();
+  $(".load-more").click(function(e){
+    e.preventDefault();
+    $(".comment-list:hidden").slice(0,3).fadeIn("slow");
+
+    if($(".comment-list:hidden").length == 0){
+       $(".load-more").fadeOut("slow");
+      }
+  });
+})
+</script>
+<!--sun-->
+<script>
+  const mainCover=document.querySelector("#bgCover");
+const sun=document.querySelector("#sun");
+
+window.addEventListener("scroll",function(){
+   var value=window.scrollY;
+   mainCover.style.top=value*0.5+"px";
+   sun.style.left=value*0.5+"px";
+})
+
+
+</script>
+<!--apply-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+<script>
+
+var svg = $('#hands-svg');
+svg.setActive = false;
+
+var svgHands = function(element) {
+  var
+    select = function(e) {
+      return document.querySelector(e);
+    },
+    hands = select('#hands'),
+    left_hand = select('#left_hand'),
+    right_hand = select('#right_hand'),
+    left_index_finger = select("#left_index_finger"),
+    left_middle_finger = select("#left_middle_finger"),
+    left_ring_finger = select("#left_ring_finger"),
+    right_index_finger = select("#right_index_finger"),
+    right_middle_finger = select("#right_middle_finger"),
+    right_ring_finger = select("#right_ring_finger");
+
+  var tl_lh = new TimelineLite();
+  tl_lh
+    .add(
+      TweenMax.set(
+        [left_index_finger, left_middle_finger, left_ring_finger], {
+          transformOrigin: "50% 100%"
+        }),
+      TweenMax.set(
+        left_hand, {
+          transformOrigin: "50% 100%",
+          x: 0,
+          y: 0
+        })
+    )
+    .add(TweenMax.to(left_hand, 0.5, {
+      y: -10
+    }, 0))
+    .add(TweenMax.to(left_index_finger, 0.15, {
+      scaleY: 0.8
+    }))
+    .add(TweenMax.to(left_index_finger, 0.15, {
+      scaleY: 1
+    }))
+    .add(TweenMax.to(left_hand, 0.2, {
+      y: -20,
+      x: -10
+    }))
+    .add(TweenMax.to(left_middle_finger, 0.15, {
+      scaleY: 0.8
+    }))
+    .add(TweenMax.to(left_middle_finger, 0.15, {
+      scaleY: 1
+    }))
+    .add(TweenMax.to(left_hand, 0.1, {
+      y: -24,
+      x: 24
+    }))
+    .add(TweenMax.to(left_middle_finger, 0.15, {
+      scaleY: 0.8
+    }))
+    .add(TweenMax.to(left_middle_finger, 0.15, {
+      scaleY: 1
+    }))
+    .add(TweenMax.to(left_ring_finger, 0.15, {
+      scaleY: 0.8
+    }))
+    .add(TweenMax.to(left_ring_finger, 0.15, {
+      scaleY: 1
+    }))
+    .add(TweenMax.to(left_hand, 0.5, {
+      x: 0,
+      y: 0
+    }, 0));
+
+  var tl_rh = new TimelineLite();
+
+  tl_rh
+    .add(
+      TweenMax.set(
+        [right_index_finger, right_middle_finger, right_ring_finger], {
+          transformOrigin: "50% 100%"
+        }),
+      TweenMax.set(
+        right_hand, {
+          transformOrigin: "50% 100%",
+          x: 0,
+          y: 0
+        })
+    )
+    .add(TweenMax.to(right_hand, 0.5, {
+      y: -10
+    }, 0))
+    .add(TweenMax.to(right_index_finger, 0.15, {
+      scaleY: 0.8
+    }))
+    .add(TweenMax.to(right_index_finger, 0.15, {
+      scaleY: 1
+    }))
+    .add(TweenMax.to(right_hand, 0.2, {
+      y: -20,
+      x: -10
+    }))
+    .add(TweenMax.to(right_middle_finger, 0.15, {
+      scaleY: 0.8
+    }))
+    .add(TweenMax.to(right_middle_finger, 0.15, {
+      scaleY: 1
+    }))
+    .add(TweenMax.to(right_hand, 0.1, {
+      y: -24,
+      x: 12
+    }))
+    .add(TweenMax.to(right_middle_finger, 0.15, {
+      scaleY: 0.8
+    }))
+    .add(TweenMax.to(right_middle_finger, 0.15, {
+      scaleY: 1
+    }))
+    .add(TweenMax.to(right_ring_finger, 0.15, {
+      scaleY: 0.8
+    }))
+    .add(TweenMax.to(right_ring_finger, 0.15, {
+      scaleY: 1
+    }))
+    .add(TweenMax.to(right_hand, 0.5, {
+      x: 0,
+      y: 0
+    }, 0));
+
+  var timeline = new TimelineLite({
+    onComplete: function() {
+      svg.setActive = false
+    }
+  });
+
+  timeline.append(tl_lh).append(tl_rh, -2);
+
+  timeline.pause().progress();
+
+  return timeline;
+}
+
+svg.on("mouseenter", function() {
+  if (svg.setActive == false) {
+    svg.setActive = true;
+    svgHands().play();
+  }
+  return svg.setActive = true;
+});
+</script>
+<script>
+  let contents1 = document.getElementsByClassName('mb-3');
+  Array.from(contents1).forEach((element)=>{
+    element.innerHTML = element.innerText
+
+  })
+</script>
+<script>
+  /*playlist*/
+
+
+
+</script>
+</body>
+
+</html>

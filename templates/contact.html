@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+
+<head>
+  <title>Contact Us &mdash; And Give Feedback</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link href="{% static 'css/jquery.mb.YTPlayer.min.css' %}" media="all" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+</head>
+<style>
+
+
+  body{
+    font-family: 'Alata', sans-serif;
+
+  }
+
+  h1, h2, h3, h4, h5,
+  .h1, .h2, .h3, .h4, .h5 {
+   font-family: 'Alata', sans-serif;
+
+  }
+  a{
+
+   font-family: 'Alata', sans-serif;
+
+
+  }
+
+
+
+
+
+    /*loader*/
+
+  /* Created by Ronak*/
+
+  .stage {
+    margin: 100px 50px 50px 50px;
+
+  }
+
+  @-webkit-keyframes spincube {
+    from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    16%      { -webkit-transform: rotateY(-90deg);                           }
+    33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);            }
+    50%      { -webkit-transform: rotateY(-180deg) rotateZ(90deg);           }
+    66%      { -webkit-transform: rotateY(-270deg) rotateX(90deg);           }
+    83%      { -webkit-transform: rotateX(90deg);                            }
+  }
+
+  @keyframes spincube {
+    from,to {
+      -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+      -moz-transform: rotateY(-90deg);
+      -ms-transform: rotateY(-90deg);
+      transform: rotateY(-90deg);
+    }
+    33% {
+      -moz-transform: rotateY(-90deg) rotateZ(90deg);
+      -ms-transform: rotateY(-90deg) rotateZ(90deg);
+      transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50% {
+      -moz-transform: rotateY(-180deg) rotateZ(90deg);
+      -ms-transform: rotateY(-180deg) rotateZ(90deg);
+      transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+      -moz-transform: rotateY(-270deg) rotateX(90deg);
+      -ms-transform: rotateY(-270deg) rotateX(90deg);
+      transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83% {
+      -moz-transform: rotateX(90deg);
+      -ms-transform: rotateX(90deg);
+      transform: rotateX(90deg);
+    }
+  }
+
+  .cubespinner {
+    -webkit-animation-name: spincube;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 12s;
+
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transform-origin: 60px 60px 0;
+    -moz-transform-origin: 60px 60px 0;
+    -ms-transform-origin: 60px 60px 0;
+    transform-origin: 60px 60px 0;
+  }
+
+  .cubespinner div {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.9);
+    line-height:200px;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .cubespinner .face1 {
+    color: CadetBlue;
+    -webkit-transform: translateZ(60px);
+    -moz-transform: translateZ(60px);
+    -ms-transform: translateZ(60px);
+    transform: translateZ(60px);
+  }
+  .cubespinner .face2 {
+    color: ForestGreen;
+    -webkit-transform: rotateY(90deg) translateZ(60px);
+    -moz-transform: rotateY(90deg) translateZ(60px);
+    -ms-transform: rotateY(90deg) translateZ(60px);
+    transform: rotateY(90deg) translateZ(60px);
+  }
+  .cubespinner .face3 {
+    color: blue;
+    -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+    -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+    -ms-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+    transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+  }
+  .cubespinner .face4 {
+    color: orange;
+    -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+    -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+    -ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+  }
+  .cubespinner .face5 {
+    color: red;
+    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+    -ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+  }
+  .cubespinner .face6 {
+    color: DarkSlateGray;
+    -webkit-transform: rotateX(-90deg) translateZ(60px);
+    -moz-transform: rotateX(-90deg) translateZ(60px);
+    -ms-transform: rotateX(-90deg) translateZ(60px);
+    transform: rotateX(-90deg) translateZ(60px);
+  }
+  .cubespinner .face7 {
+      color: Yellow;
+      -webkit-transform:rotateX(-90deg)
+      translateZ(60px);
+      -moz-transform: rotate x(-90deg)translateZ(60px);
+      -ms-transform: rotate x(-90deg)translateZ(60px);
+      transform: rotateX(-90deg)
+      translateZ(60px);
+  }
+
+
+
+
+
+  /*dropdown*/
+  .dropdown {
+      width: 10em;
+      height: 3em;
+      padding: 1em 1.5em;
+      box-sizing: border-box;
+      background-image: -moz-linear-gradient( 17deg, rgb(13,5,149) 0%, rgb(75,15,172) 46%, rgb(136,24,194) 100%);
+      background-image: -webkit-linear-gradient( 17deg, rgb(13,5,149) 0%, rgb(75,15,172) 46%, rgb(136,24,194) 100%);
+      background-image: -ms-linear-gradient( 17deg, rgb(13,5,149) 0%, rgb(75,15,172) 46%, rgb(136,24,194) 100%);
+      border-radius: 1.5em;
+
+      color: white;
+      line-height: 1em;
+      text-transform: uppercase;
+
+      font-weight: 500;
+      text-align: center;
+
+      position: relative;
+      display: inline-block;
+  }
+
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      color: white;
+
+      left: 0;
+
+      background-image: -moz-linear-gradient( 45deg, rgb(13,5,149) 0%, rgb(66,0,255) 46%, rgb(101,12,225) 72%, rgb(136,24,194) 100%);
+      background-image: -webkit-linear-gradient( 45deg, rgb(13,5,149) 0%, rgb(66,0,255) 46%, rgb(101,12,225) 72%, rgb(136,24,194) 100%);
+      background-image: -ms-linear-gradient( 45deg, rgb(13,5,149) 0%, rgb(66,0,255) 46%, rgb(101,12,225) 72%, rgb(136,24,194) 100%);
+
+      width: 100%;
+      padding: 3em 0 0 0;
+      box-sizing: border-box;
+      border-radius: 1.5em;
+      box-shadow: 0.5em 0.5em 1em 0 rgba(0,0,0,0.2);
+
+      z-index: -1;
+  }
+
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+
+  .dropdown-itens {
+      color: inherit;
+      text-transform: capitalize;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      text-align: center;
+      margin: 1em 0;
+  }
+
+  </style>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <div class="header-top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 d-flex">
+            <a href="/" class="site-logo">
+              <div class="site-logo">
+              <img style="
+
+                height: 146px;
+    width: 172px;
+    position: relative;
+    margin-left: -25px;
+    margin-top: -22px;
+    " src="{% static 'images/logo.png' %}" alt=""></div>
+            </a>
+
+            <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                class="icon-menu h3"></span></a>
+
+          </div>
+          <div class="col-12 col-lg-6 ml-auto d-flex">
+            <div class="ml-md-auto top-social d-none d-lg-inline-block">
+              <a href="#" class="d-inline-block p-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="d-inline-block p-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="d-inline-block p-3"><span class="icon-instagram"></span></a>
+            </div>
+
+
+
+          </div>
+          <div class="col-6 d-block d-lg-none text-right">
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
+
+        <div class="container">
+          <div class="d-flex align-items-center">
+
+            <div class="mr-auto">
+              <nav class="site-navigation position-relative text-right" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
+                  <li class="active">
+                    <a href="/" class="nav-link text-left">Home</a>
+                  </li>
+
+                  <li>
+                    <a href="/contact/" class="nav-link text-left">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="blog/{{editorial.slug}}" class="nav-link text-left">Editorial</a>
+                  </li>
+                  <li>
+                      <a href="/quizes/" class="nav-link text-left">Quiz</a>
+                  </li>
+
+
+
+                  <li style="width:244px;"><form style="max-width: 100%;" enctype="multipart/form-data" method="POST" action="/search/" class="search-form d-inline-block">
+
+                    {% csrf_token %}
+                    <div class="d-flex">
+                      <input type="text" name="query" id="query" class="form-control" placeholder="Search...">
+                      <button type="submit" class="btn btn-secondary" ><span class="icon-search"></span></button>
+                    </div>
+                  </form>
+                </li>
+                <li>
+                  <div style="cursor: pointer;" class="dropdown">
+                    <span>সাহিত্য বিশেষ</span>
+                    <div style="margin-bottom: 2rem;" class="dropdown-content">
+                      <ul>
+                        <li class="lists"><a class="dropdown-itens" href="/poems/">কবিতা</a></li>
+                        <li class="lists"><a class="dropdown-itens" href="/comics/">কমিক্চ্</a></li>
+                        <li class="lists"><a class="dropdown-itens" href="/upanyax/">উপন‍্যাস</a></li>
+                        <li class="lists"><a class="dropdown-itens" href="/songs/">সংগীত</a></li>
+                        <li class="lists"><a class="dropdown-itens" href="/interviews/">কথা-বাৰ্তা</a></li>
+                        <li class="lists"><a class="dropdown-itens" href="/comedy/">ব‍্যংগ</a></li>
+                        <li class="lists"><a class="dropdown-itens" href="/microstories/">অণুগল্প সমাহাৰ</a></li>
+
+                        <li class="lists"><a class="dropdown-itens" href="/stories/">গল্প </a></li>
+                        <li class="lists"><a class="dropdown-itens" href="/more/">More </a></li>
+
+
+
+                      </ul>
+
+                    </div>
+                </div>
+                </li>
+
+                <li>
+                  <div style="cursor: pointer;" class="dropdown">
+                    <span>প্ৰৱন্ধ</span>
+                    <div style="margin-bottom: 2rem;" class="dropdown-content">
+                      <ul>
+
+                        <li class="lists"><a class="dropdown-itens" href="/science/">বিজ্ঞান</a></li>
+                        <li class="lists"><a class="dropdown-itens" href="/medical/">চিকিৎসা বিজ্ঞান</a></li>
+                        <li class="lists"><a class="dropdown-itens" href="/best_of_xonkhya/">এই সংখ‍্যা বিশেষ</a></li>
+
+                        <li class="lists"><a class="dropdown-itens" href="/history/">ইতিহাসৰ অনুৰণন</a></li>
+                        <li class="lists"><a class="dropdown-itens" href="/awareness/">গণ-জাগৰন</a></li>
+                        <li class="lists"><a class="dropdown-itens" href="/sports/">ক্ৰীড়া</a></li>
+
+                      </ul>
+
+
+
+                    </div>
+                </div>
+                </li>
+                </ul>
+              </nav>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row">
+
+          {% if name %}
+          <h3>Hey {{name}}, We Received Your Email, Check You Email</h3>
+
+
+          {% else %}
+          <div class="col-lg-12">
+            <div class="section-title mb-5">
+              <h2>Contact Us</h2>
+            </div>
+            <form enctype="multipart/form-data" action="/contact/" method="post">{% csrf_token %}
+
+                  <div class="row">
+                      <div class="col-md-6 form-group">
+                          <label for="fname">Name</label>
+                          <input type="text" id="fname" name ="fname" class="form-control form-control-lg">
+                      </div>
+
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6 form-group">
+                          <label for="eaddress">Email Address</label>
+                          <input type="text" id="eaddress" name = "eaddress" class="form-control form-control-lg">
+                      </div>
+                      <div class="col-md-6 form-group">
+                          <label for="tel">Tel. Number</label>
+                          <input type="text" name ="tel" id="tel" class="form-control form-control-lg">
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12 form-group">
+                          <label for="message">Message</label>
+                          <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-12">
+                          <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                      </div>
+                  </div>
+
+            </form>
+          </div>
+          {% endif %}
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <div class="footer">
+      <div class="container">
+
+
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- .site-wrap -->
+
+
+  <!-- loader -->
+  <!-- loader -->
+  <div id="loader" class="show fullscreen">
+    <center><div class="stage" style="width: 120px; height: 120px;">
+    <div class="cubespinner">
+      <div class="face1">কাচিঁয়লি</div>
+      <div class="face2">সংগীত</div>
+      <div class="face3">উপন‍্যাস</div>
+      <div class="face4">বিজ্ঞান</div>
+      <div class="face5">প্ৰশ্নবাণ</div>
+      <div class="face6">ব‍্যংগ</div>
+      <div class="face7">সংগীত</div>
+    </div>
+  </center>
+</div></div>
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/aos.j' %}s"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
+
+
+
+
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
